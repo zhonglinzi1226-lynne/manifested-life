@@ -385,17 +385,17 @@ var ENDINGS = [
 
 // 每阶段配色和emoji
 var STAGE_THEMES = [
-  {emoji:'👶', gradient:'linear-gradient(135deg,#E5173F 0%,#FF69B4 45%,#FFD700 100%)', bg:'stage-bg/stage-1.png'},
-  {emoji:'💉', gradient:'linear-gradient(135deg,#9B59B6 0%,#FF69B4 50%,#FFD700 100%)', bg:'stage-bg/stage-2.png'},
-  {emoji:'🎬', gradient:'linear-gradient(135deg,#8B0000 0%,#E5173F 50%,#FF4500 100%)', bg:'stage-bg/stage-3.png'},
-  {emoji:'💋', gradient:'linear-gradient(135deg,#E67E22 0%,#FFD700 45%,#E5173F 100%)', bg:'stage-bg/stage-4.png'},
-  {emoji:'💼', gradient:'linear-gradient(135deg,#1a1a1a 0%,#1E90FF 50%,#9B59B6 100%)', bg:'stage-bg/stage-5.png'},
-  {emoji:'⚖️', gradient:'linear-gradient(135deg,#2C3E50 0%,#2ECC71 50%,#1E90FF 100%)', bg:'stage-bg/stage-6.png'},
-  {emoji:'👑', gradient:'linear-gradient(135deg,#B8860B 0%,#FFD700 45%,#E67E22 100%)', bg:'stage-bg/stage-7.png'},
-  {emoji:'📺', gradient:'linear-gradient(135deg,#E5173F 0%,#FF1493 50%,#9B59B6 100%)', bg:'stage-bg/stage-8.png'},
-  {emoji:'💍', gradient:'linear-gradient(135deg,#9B59B6 0%,#FF69B4 45%,#2ECC71 100%)', bg:'stage-bg/stage-9.png'},
-  {emoji:'🏢', gradient:'linear-gradient(135deg,#E67E22 0%,#FFD700 50%,#2ECC71 100%)', bg:'stage-bg/stage-10.png'},
-  {emoji:'🔱', gradient:'linear-gradient(135deg,#B8860B 0%,#E5173F 45%,#1a1a1a 100%)', bg:'stage-bg/stage-11.png'}
+  {emoji:'👶', gradient:'linear-gradient(135deg,#E5173F 0%,#FF69B4 45%,#FFD700 100%)', bg:'stage-bg/stage-1.webp'},
+  {emoji:'💉', gradient:'linear-gradient(135deg,#9B59B6 0%,#FF69B4 50%,#FFD700 100%)', bg:'stage-bg/stage-2.webp'},
+  {emoji:'🎬', gradient:'linear-gradient(135deg,#8B0000 0%,#E5173F 50%,#FF4500 100%)', bg:'stage-bg/stage-3.webp'},
+  {emoji:'💋', gradient:'linear-gradient(135deg,#E67E22 0%,#FFD700 45%,#E5173F 100%)', bg:'stage-bg/stage-4.webp'},
+  {emoji:'💼', gradient:'linear-gradient(135deg,#1a1a1a 0%,#1E90FF 50%,#9B59B6 100%)', bg:'stage-bg/stage-5.webp'},
+  {emoji:'⚖️', gradient:'linear-gradient(135deg,#2C3E50 0%,#2ECC71 50%,#1E90FF 100%)', bg:'stage-bg/stage-6.webp'},
+  {emoji:'👑', gradient:'linear-gradient(135deg,#B8860B 0%,#FFD700 45%,#E67E22 100%)', bg:'stage-bg/stage-7.webp'},
+  {emoji:'📺', gradient:'linear-gradient(135deg,#E5173F 0%,#FF1493 50%,#9B59B6 100%)', bg:'stage-bg/stage-8.webp'},
+  {emoji:'💍', gradient:'linear-gradient(135deg,#9B59B6 0%,#FF69B4 45%,#2ECC71 100%)', bg:'stage-bg/stage-9.webp'},
+  {emoji:'🏢', gradient:'linear-gradient(135deg,#E67E22 0%,#FFD700 50%,#2ECC71 100%)', bg:'stage-bg/stage-10.webp'},
+  {emoji:'🔱', gradient:'linear-gradient(135deg,#B8860B 0%,#E5173F 45%,#1a1a1a 100%)', bg:'stage-bg/stage-11.webp'}
 ];
 
 function initStageDots(){
@@ -656,22 +656,22 @@ function showEnding(){
 // 结局收集定义（所有可解锁结局，共16种）
 // avatar 对应 投胎头像素材/ 目录下的文件
 var ENDING_CATALOG = [
-  {id:'soul_death', emoji:'💀', name:'精神死亡',    avatar:'5.jpg'},
-  {id:'broke',      emoji:'💸', name:'严肃破产中',  avatar:'8.jpg'},
-  {id:'exile',      emoji:'🚪', name:'逐出"卡"门', avatar:'12.jpg'},
-  {id:'forgotten',  emoji:'👻', name:'过气顶流',    avatar:'15.jpg'},
-  {id:'puppet',     emoji:'🎭', name:'傀儡女王',    avatar:'3.jpg'},
-  {id:'chaos',      emoji:'🎪', name:'抓马queen',   avatar:'7.jpg'},
-  {id:'taihou2',    emoji:'👑', name:'Queen never cry', avatar:'1.jpg'},
-  {id:'wallstreet', emoji:'💰', name:'老娘独享经济', avatar:'2.jpg'},
-  {id:'topchart',   emoji:'📱', name:'没有不上热搜', avatar:'4.jpg'},
-  {id:'retire',     emoji:'🎨', name:'再见卡戴珊战士', avatar:'9.jpg'},
-  {id:'fastfood',   emoji:'🍗', name:'M女王',       avatar:'6.jpg'},
-  {id:'scholar',    emoji:'📚', name:'雅思8.5',     avatar:'10.jpg'},
-  {id:'npc',        emoji:'💤', name:'九位数NPC',   avatar:'11.jpg'},
-  {id:'korea',      emoji:'🎤', name:'KPOP五女一',  avatar:'13.jpg'},
-  {id:'kanye',      emoji:'🎵', name:'侃爷合伙人',  avatar:'14.jpg'},
-  {id:'onlyfans',   emoji:'💻', name:'OnlyFans主理人', avatar:'16.jpg'},
+  {id:'soul_death', emoji:'💀', name:'精神死亡',    avatar:'5.webp'},
+  {id:'broke',      emoji:'💸', name:'严肃破产中',  avatar:'8.webp'},
+  {id:'exile',      emoji:'🚪', name:'逐出"卡"门', avatar:'12.webp'},
+  {id:'forgotten',  emoji:'👻', name:'过气顶流',    avatar:'15.webp'},
+  {id:'puppet',     emoji:'🎭', name:'傀儡女王',    avatar:'3.webp'},
+  {id:'chaos',      emoji:'🎪', name:'抓马queen',   avatar:'7.webp'},
+  {id:'taihou2',    emoji:'👑', name:'Queen never cry', avatar:'1.webp'},
+  {id:'wallstreet', emoji:'💰', name:'老娘独享经济', avatar:'2.webp'},
+  {id:'topchart',   emoji:'📱', name:'没有不上热搜', avatar:'4.webp'},
+  {id:'retire',     emoji:'🎨', name:'再见卡戴珊战士', avatar:'9.webp'},
+  {id:'fastfood',   emoji:'🍗', name:'M女王',       avatar:'6.webp'},
+  {id:'scholar',    emoji:'📚', name:'雅思8.5',     avatar:'10.webp'},
+  {id:'npc',        emoji:'💤', name:'九位数NPC',   avatar:'11.webp'},
+  {id:'korea',      emoji:'🎤', name:'KPOP五女一',  avatar:'13.webp'},
+  {id:'kanye',      emoji:'🎵', name:'侃爷合伙人',  avatar:'14.webp'},
+  {id:'onlyfans',   emoji:'💻', name:'OnlyFans主理人', avatar:'16.webp'},
 ];
 
 // 根据结局 id 获取对应头像路径
@@ -679,7 +679,7 @@ function getEndingAvatar(endingId){
   for(var i=0;i<ENDING_CATALOG.length;i++){
     if(ENDING_CATALOG[i].id===endingId) return '投胎头像素材/'+ENDING_CATALOG[i].avatar;
   }
-  return '投胎头像素材/结尾.jpg'; // 默认使用结尾图
+  return '投胎头像素材/结尾.webp'; // 默认使用结尾图
 }
 
 function buildEndingCard(card, e, s, isSideline){
