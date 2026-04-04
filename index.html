@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>被显化的一生：卡戴珊家族投胎器</title>
+<title>保持富态：卡戴珊家族投胎模拟器</title>
+<meta name="description" content="投胎到卡戴珊家族，你能活成什么样？模拟成功，直到成功！">
+<meta property="og:title" content="保持富态：卡戴珊家族投胎模拟器">
+<meta property="og:description" content="投胎到卡戴珊家族，你能活成什么样？模拟成功，直到成功！">
+<meta property="og:type" content="website">
 <style>
 /* ========== RESET & BASE ========== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -973,12 +977,22 @@ html, body {
   -webkit-tap-highlight-color: transparent;
   box-shadow: 3px 3px 0 rgba(255,255,255,0.05);
 }
-.choice-btn:hover, .choice-btn:active {
+/* 桌面端才显示 hover 效果，手机不触发 */
+@media (hover: hover) and (pointer: fine) {
+  .choice-btn:hover:not(.selected):not(.disabled) {
+    background: var(--pop-red);
+    border-color: #FFD700;
+    color: white;
+    transform: translate(-2px,-2px);
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+  }
+}
+.choice-btn:active:not(.selected):not(.disabled) {
   background: var(--pop-red);
   border-color: #FFD700;
   color: white;
-  transform: translate(-2px,-2px);
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+  transform: translate(0,0);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.4);
 }
 .choice-btn .choice-tag {
   font-family: 'Impact','Arial Black',sans-serif;
@@ -986,12 +1000,16 @@ html, body {
   color: #FFD700; display: block; margin-bottom: 3px;
 }
 .choice-btn.selected {
-  background: var(--pop-red);
-  border-color: #FFD700;
-  color: white;
+  background: var(--pop-red) !important;
+  border-color: #FFD700 !important;
+  color: white !important;
+  transform: none !important;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.4) !important;
 }
 .choice-btn.disabled {
   opacity: 0.45; pointer-events: none;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 /* ── 事件反馈 ── */
@@ -1032,60 +1050,6 @@ html, body {
   display: none;
   width: calc(100% - 28px);
   margin: 12px 14px 0;
-  padding: 13px;
-  background: var(--pop-red); color: white;
-  font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 15px; font-weight: 900;
-  letter-spacing: 4px; text-transform: uppercase;
-  border: 3px solid #FFD700; cursor: pointer;
-  box-shadow: 5px 5px 0 var(--pop-black);
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.15s; text-align: center; flex-shrink: 0;
-}
-.next-stage-btn.show { display: block; }
-.next-stage-btn:hover  { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--pop-black); }
-.next-stage-btn:active { transform: translate(3px,3px);  box-shadow: 2px 2px 0 var(--pop-black); }
-  opacity: 0.4; pointer-events: none;
-}
-
-/* 事件反馈弹窗 */
-.event-feedback {
-  margin: 14px 14px 0;
-  background: linear-gradient(135deg, #1a0a1a, #0d0d0d);
-  border: 3px solid var(--pop-red);
-  box-shadow: 5px 5px 0 rgba(229,23,63,0.4);
-  padding: 14px 14px 12px;
-  display: none; flex-shrink: 0;
-}
-.event-feedback.show { display: block; }
-.event-feedback-title {
-  font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 11px; letter-spacing: 3px;
-  color: var(--pop-red); text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.event-feedback-text {
-  font-family: Georgia,'Noto Serif SC','Songti SC',serif;
-  font-size: 12px; color: rgba(255,255,255,0.88);
-  line-height: 1.7;
-}
-.stat-delta {
-  display: inline-flex; align-items: center;
-  gap: 3px; font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 10px; padding: 2px 6px;
-  border-radius: 0; margin: 2px;
-}
-.stat-delta.up   { background: rgba(46,204,113,0.2); color: #2ECC71;
-                   border: 1px solid rgba(46,204,113,0.4); }
-.stat-delta.down { background: rgba(229,23,63,0.2);  color: #E5173F;
-                   border: 1px solid rgba(229,23,63,0.4); }
-.stat-deltas { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px; }
-
-/* 继续按钮 */
-.next-stage-btn {
-  display: none;
-  width: calc(100% - 28px);
-  margin: 14px 14px 0;
   padding: 13px;
   background: var(--pop-red); color: white;
   font-family: 'Impact','Arial Black',sans-serif;
@@ -1151,7 +1115,7 @@ html, body {
   display: block;
   overflow-y: auto !important;
   -webkit-overflow-scrolling: touch;
-  padding: 16px 14px 40px;
+  padding: 10px 10px 30px;
   text-align: center;
 }
 #ending-screen .ending-card {
@@ -1162,18 +1126,18 @@ html, body {
 /* 卡片容器 */
 .ending-card {
   width: 100%; max-width: 420px;
-  border: 4px solid var(--pop-red);
-  box-shadow: 8px 8px 0 var(--pop-red);
+  border: 3px solid var(--pop-red);
+  box-shadow: 6px 6px 0 var(--pop-red);
   overflow: visible;
   background: #1a1a1a;
 }
 
 /* ① 大标题横幅 */
 .ending-banner {
-  padding: 14px 16px 12px;
+  padding: 10px 14px 8px;
   text-align: center;
   position: relative;
-  border-bottom: 4px solid #000;
+  border-bottom: 3px solid #000;
   overflow: hidden;
 }
 .ending-banner::before {
@@ -1193,12 +1157,12 @@ html, body {
 }
 .ending-big-title {
   font-family: 'Impact','Arial Black','PingFang SC','Hiragino Sans GB',sans-serif;
-  font-size: 28px; font-weight: 900;
+  font-size: 22px; font-weight: 900;
   color: #fff; line-height: 1.15;
-  text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
   word-break: break-all;
   position: relative; z-index: 1;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .ending-title {
   font-family: 'Impact','Arial Black',sans-serif;
@@ -1237,138 +1201,138 @@ html, body {
 /* ② 显化头像区 */
 .ending-avatar-area {
   background: #111;
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px 0 12px;
-  gap: 8px;
+  padding: 10px 0 8px;
+  gap: 4px;
 }
 .ending-avatar-placeholder {
-  width: 130px; height: 130px;
+  width: 90px; height: 90px;
   border-radius: 50%;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  border: 3px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.2);
 }
 .ending-avatar-caption {
   font-family: 'PingFang SC','Hiragino Sans GB',sans-serif;
-  font-size: 11px; color: rgba(255,255,255,0.5);
+  font-size: 10px; color: rgba(255,255,255,0.5);
   letter-spacing: 1px;
 }
-.ending-avatar-emoji { font-size: 52px; line-height: 1; }
+.ending-avatar-emoji { font-size: 40px; line-height: 1; }
 .ending-avatar-label {
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 9px; letter-spacing: 3px;
+  font-size: 8px; letter-spacing: 3px;
   color: rgba(255,255,255,0.6);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* ③ 结局文案区 */
 .ending-body {
   background: #1a1a1a;
-  padding: 14px 16px 12px;
+  padding: 8px 12px 6px;
 }
 .ending-headline {
   background: #FFD700;
   color: #000;
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 13px; font-weight: 900;
+  font-size: 11px; font-weight: 900;
   letter-spacing: 0.5px;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border: 2px solid #000;
-  box-shadow: 3px 3px 0 rgba(229,23,63,0.5);
-  margin-bottom: 12px;
+  box-shadow: 2px 2px 0 rgba(229,23,63,0.5);
+  margin-bottom: 6px;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 .ending-story {
   font-family: Georgia,'Noto Serif SC','Songti SC',serif;
-  font-size: 12.5px; color: rgba(255,255,255,0.88);
-  line-height: 1.8; margin-bottom: 12px;
+  font-size: 11px; color: rgba(255,255,255,0.88);
+  line-height: 1.6; margin-bottom: 6px;
 }
 
 /* ④ 当你显化成功 */
 .ending-manifesto {
   background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(229,23,63,0.07));
-  border: 2px solid #FFD700;
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin-bottom: 12px;
+  border: 1.5px solid #FFD700;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
   text-align: center;
 }
 .ending-manifesto-label {
-  font-size: 9px; font-weight: 900;
+  font-size: 8px; font-weight: 900;
   letter-spacing: 3px; color: #FFD700;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .ending-manifesto-text {
-  font-size: 13px; color: #F5F5F5;
+  font-size: 11px; color: #F5F5F5;
   font-style: italic;
   font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 .ending-manifesto span {
-  display:block; margin-top:6px; font-size:13px; color:#F5F5F5;
+  display:block; margin-top:4px; font-size:11px; color:#F5F5F5;
   font-style:italic; font-family:'PingFang SC',sans-serif; font-weight:400; letter-spacing:0;
 }
 
 /* ⑤ Kris 寄语 */
 .ending-kris-quote {
   background: rgba(229,23,63,0.1);
-  border-left: 4px solid var(--pop-red);
-  padding: 10px 12px;
-  margin-bottom: 10px;
-  border-radius: 0 6px 6px 0;
+  border-left: 3px solid var(--pop-red);
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  border-radius: 0 4px 4px 0;
 }
 .ending-kris-label {
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 10px; letter-spacing: 2px;
-  color: var(--pop-red); margin-bottom: 5px;
+  font-size: 9px; letter-spacing: 2px;
+  color: var(--pop-red); margin-bottom: 3px;
 }
 .ending-kris-text {
   font-family: Georgia,'Songti SC',serif;
-  font-size: 12px; color: rgba(255,255,255,0.85);
-  line-height: 1.6; font-style: italic;
+  font-size: 11px; color: rgba(255,255,255,0.85);
+  line-height: 1.4; font-style: italic;
 }
 .ending-kris-quote strong {
   display: block;
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 10px; letter-spacing: 2px;
-  color: var(--pop-red); margin-bottom: 5px; font-style: normal;
+  font-size: 9px; letter-spacing: 2px;
+  color: var(--pop-red); margin-bottom: 3px; font-style: normal;
 }
 
 /* ⑥ 玩家人设 */
 .ending-persona {
   background: rgba(255,215,0,0.07);
   border: 1.5px solid rgba(255,215,0,0.25);
-  padding: 8px 12px;
+  padding: 5px 10px;
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 11px; color: #FFD700;
-  letter-spacing: 1px; line-height: 1.5;
+  font-size: 10px; color: #FFD700;
+  letter-spacing: 1px; line-height: 1.4;
   text-align: center;
 }
 .ending-persona span {
   display: block;
   font-family: 'PingFang SC','Hiragino Sans GB',sans-serif;
-  font-size: 10px; color: rgba(255,255,255,0.6);
+  font-size: 9px; color: rgba(255,255,255,0.6);
   font-weight: 400; letter-spacing: 0;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 /* ⑦ 结局收集墙（紧凑横排版） */
 .ending-collection {
   background: #0f0f0f;
-  border-top: 3px solid #000;
-  padding: 10px 10px 8px;
+  border-top: 2px solid #000;
+  padding: 6px 8px 5px;
 }
 .collection-header {
   font-family: 'PingFang SC','Hiragino Sans GB',sans-serif;
-  font-size: 13px; letter-spacing: 1px;
+  font-size: 11px; letter-spacing: 1px;
   color: rgba(255,255,255,0.8);
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .collection-count {
   color: #FFD700; font-size: 14px; font-weight: 700;
@@ -1376,18 +1340,18 @@ html, body {
 .collection-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 3px;
   justify-content: center;
 }
 .collection-item {
   background: #1a1a1a;
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 4px;
-  padding: 3px 6px;
+  border-radius: 3px;
+  padding: 2px 4px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
   white-space: nowrap;
 }
 .collection-item.unlocked {
@@ -1400,58 +1364,58 @@ html, body {
   background: rgba(255,215,0,0.12);
 }
 .collection-emoji {
-  font-size: 13px; line-height: 1;
+  font-size: 11px; line-height: 1;
 }
 .collection-name {
   font-family: 'PingFang SC','Hiragino Sans GB',sans-serif;
-  font-size: 10px; color: rgba(255,255,255,0.75);
+  font-size: 8px; color: rgba(255,255,255,0.75);
   line-height: 1.2;
 }
 .coll-lock {
-  font-size: 11px; color: rgba(255,255,255,0.25);
+  font-size: 9px; color: rgba(255,255,255,0.25);
   font-weight: 700;
 }
 .coll-unknown {
   color: rgba(255,255,255,0.25);
-  font-size: 9px;
+  font-size: 8px;
 }
 
 /* ⑧ 分享区（紧凑横排） */
 .ending-share-zone {
-  padding: 12px 14px;
+  padding: 8px 10px;
   background: #111;
-  border-top: 3px solid #000;
+  border-top: 2px solid #000;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .ending-qr-area {
   flex-shrink: 0;
 }
 .ending-qr-img {
-  width: 90px; height: 90px;
+  width: 70px; height: 70px;
   border: 2px solid #FFD700;
-  border-radius: 6px;
+  border-radius: 4px;
   background: #fff;
-  padding: 4px;
+  padding: 3px;
 }
 .ending-share-tip {
   text-align: left;
-  font-size: 11px;
+  font-size: 10px;
   color: rgba(255,255,255,0.55);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 .ending-share-tip strong { color: #FFD700; }
 
 /* ⑨ 重玩按钮 */
 .replay-btn {
   display: block; width: 100%;
-  padding: 14px;
+  padding: 10px;
   background: #FFD700;
   color: #000; font-weight: 900;
   font-family: 'Impact','Arial Black',sans-serif;
-  font-size: 18px; letter-spacing: 3px;
-  border: none; border-top: 3px solid #000;
+  font-size: 15px; letter-spacing: 3px;
+  border: none; border-top: 2px solid #000;
   cursor: pointer;
   transition: transform .1s, box-shadow .1s;
 }

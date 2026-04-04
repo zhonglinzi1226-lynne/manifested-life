@@ -755,8 +755,8 @@ function buildEndingCard(card, e, s, isSideline){
     +'<img src="'+qrImgSrc+'" alt="游戏二维码" class="ending-qr-img" crossorigin="anonymous">'
     +'</div>'
     +'<div class="ending-share-tip">'
-    +'📱 长按截图保存<br>'
-    +'转发给你的家人/同事/老板/对象/sugar mommy 或 daddy<br>'
+    +'📱 截图转发给你的<br>'
+    +'家人/同事/老板/对象/<br>sugar mommy 或 daddy<br>'
     +'<strong>这次你一定要提现！</strong>'
     +'</div>'
     +'</div>';
@@ -1468,7 +1468,7 @@ function drawPoster(ctx, W, H, title, manifesto, kris, color, avatarImg){
   // --- 游戏名 ---
   ctx.fillStyle = color;
   ctx.font = 'bold 36px Impact, "PingFang SC", Arial';
-  ctx.fillText('《被显化的一生》卡戴珊投胎器', W/2, 1640);
+  ctx.fillText('《保持富态》卡戴珊家族投胎模拟器', W/2, 1640);
   ctx.fillStyle = 'rgba(255,255,255,0.5)';
   ctx.font = '24px "PingFang SC", Arial';
   ctx.fillText('扫码开始投胎 ↗', W/2, 1680);
