@@ -1791,7 +1791,7 @@ var GameState = {
 (function() {
   var el  = document.getElementById('pvCount');
   var src = document.getElementById('vercount_value_site_pv');
-  var BASE_OFFSET = 500; // 历史访问量基数（GitHub Pages 时期积累）
+  var BASE_OFFSET = 12800; // 历史访问量基数
 
   function syncPV() {
     var raw = src ? src.textContent.trim() : '';
