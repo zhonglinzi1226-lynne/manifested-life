@@ -1574,6 +1574,8 @@ html, body {
 
     <div class="counter">
       目前已有 <span class="num" id="pvCount">---</span> 人投胎成功
+      <!-- Vercount 隐藏的真实PV数据源 -->
+      <span id="vercount_value_site_pv" style="display:none"></span>
     </div>
   </div>
 
@@ -1784,29 +1786,34 @@ var GameState = {
 })();
 
 // ============================================================
-// 封面：PV 计数器（基于上线日期的逼真递增算法）
+// 封面：PV 计数器（Vercount 真实计数 + 基数偏移）
 // ============================================================
 (function() {
   var el  = document.getElementById('pvCount');
-  // 基于上线日期（2026-04-05），从500起步，所有人看到同一个数字
-  var launchDate = new Date('2026-04-05T00:00:00');
-  var now = new Date();
-  var days = Math.max(0, Math.floor((now - launchDate) / 86400000));
-  var base = 500; // 起始基数：上线首日约500人
-  var total = base;
-  for (var i = 0; i < days; i++) {
-    // 每天递增50~120人，伪随机但固定
-    total += 50 + ((i * 137 + 53) % 70);
+  var src = document.getElementById('vercount_value_site_pv');
+  var BASE_OFFSET = 500; // 历史访问量基数（GitHub Pages 时期积累）
+
+  function syncPV() {
+    var raw = src ? src.textContent.trim() : '';
+    var num = parseInt(raw.replace(/,/g, ''), 10);
+    if (!isNaN(num) && num > 0) {
+      el.textContent = (num + BASE_OFFSET).toLocaleString('en-US');
+    }
   }
-  // 当天内根据小时数微增，模拟实时增长感
-  var hour = now.getHours();
-  total += Math.floor(hour * 2.5);
-  var display = total;
-  el.textContent = display.toLocaleString('en-US');
-  setInterval(function() {
-    display += Math.floor(Math.random() * 2);
-    el.textContent = display.toLocaleString('en-US');
-  }, 8000 + Math.random() * 7000);
+
+  // Vercount 是异步加载的，用 MutationObserver 监听数据变化
+  if (src) {
+    var observer = new MutationObserver(function() { syncPV(); });
+    observer.observe(src, { childList: true, characterData: true, subtree: true });
+  }
+
+  // 同时轮询兜底（以防 observer 没触发）
+  var pollCount = 0;
+  var pollTimer = setInterval(function() {
+    syncPV();
+    pollCount++;
+    if (pollCount > 30) clearInterval(pollTimer); // 30秒后停止轮询
+  }, 1000);
 })();
 
 // ============================================================
@@ -2100,6 +2107,7 @@ function closeReview() {
   if (overlay) overlay.classList.remove('show');
 }
 </script>
+<script defer src="https://events.vercount.one/js"></script>
 <script src="game-engine.js"></script>
 
 </body>
