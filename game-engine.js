@@ -15,7 +15,7 @@ var STAGES = [
      delta:{liuliang:30,taihou:20,ziwo:-20,shenjia:2},type:'名利',
      feedback:'你的哭戏堪比奥斯卡，KTV频道收视率暴涨，太后当场签下了你的第一份婴儿食品代言——代言的是四牛奶粉，后来被曝出有造假，你第一时间站队取消代言。万幸的是成长很健康。'},
     {tag:'B',text:'面无表情地对着镜头疯狂翻白眼',
-     delta:{liuliang:15,taihou:-30,ziwo:30},type:'独立',
+     delta:{liuliang:5,taihou:-30,ziwo:30},type:'独立',
      feedback:'你翻白眼的0.5秒片段被截成GIF席卷TikTok，<strong>#[name]厌世宝宝#</strong> 冲上全美热搜第一，脱口秀女王邀请你上节目，周六夜现场给你做了专属模仿小品。但因为你还不会说话，所有商务邀约都被太后以「保护宝宝童年」推掉了——实际上是因为她还没谈好分成比例。'},
     {tag:'C',text:'爬向最近的摄像机，一口咬住镜头',
      delta:{liuliang:40,taihou:5,ziwo:10,shenjia:1},type:'抓马',
@@ -41,7 +41,7 @@ var STAGES = [
      delta:{liuliang:20,taihou:-10,ziwo:10,shenjia:5},type:'独立',
      feedback:'只做了唇部微调，效果自然到网友争论了三个月「到底动没动」。TikTok上掀起了<strong>#[name]香肠嘴#</strong> 挑战赛，间接帮丝芙兰代言多卖了200%。太后虽然嫌你「不够彻底」，但看到销量数据后勉强满意。'},
     {tag:'C',text:'"不了，我这张脸就是最好的出厂设置"',
-     delta:{liuliang:-10,taihou:-30,ziwo:40,shenjia:-3},type:'独立',
+     delta:{liuliang:-25,taihou:-30,ziwo:40,shenjia:-3},type:'独立',
      feedback:'前姐夫侃爷凌晨3点连发17条推特，置顶一条：「<strong>卡家军里唯一清醒的女士！</strong>」你的Ins一夜涨粉120万，流量直接飙升，但太后看到后当场气炸，冻结了你名下所有黑卡、信用卡，还把你从真人秀主镜头里剪掉了3集。',extraDelta:{liuliang:50,taihou:-20}},
     {tag:'D',text:'"我不做，但我可以代言医美品牌再暗中劝退别人整容"',
      delta:{liuliang:30,taihou:-20,ziwo:20,shangyebantu:15},type:'商业',
@@ -57,7 +57,7 @@ var STAGES = [
   story:'<strong>家族山庄你的卧室</strong>。太后反手锁门，拉紧窗帘，把一份收购合同拍在你床上。电脑屏幕上是你和NBA前男友的私密视频，八卦媒体24小时后就要曝光。她坐在床边，用最平静的语气说：「宝贝，现在有两个选择：<strong>花2000万买断所有母带，保全面子；或者让它流出去，分成、公关通稿、人设包装我都帮你谈好了。</strong>」',
   choices:[
     {tag:'A',text:'"掏空积蓄也要买断母带。我要尊严。"',
-     delta:{liuliang:-15,taihou:-25,ziwo:50,shenjia:-10},type:'独立',
+     delta:{liuliang:-10,taihou:-25,ziwo:50,shenjia:-10},type:'独立',
      feedback:'花光了所有存款买断了母带，媒体虽然没了视频但还是写了一篇「<strong>卡家千金花天价捂盖子</strong>」的报道。太后三天没和你说话，但你在浴室镜子里对自己说了句「至少这是你自己的选择」。'},
     {tag:'B',text:'"不小心流出，这次一定要提现！"',
      delta:{liuliang:150,taihou:30,ziwo:-45,shenjia:100},type:'名利',
@@ -105,7 +105,7 @@ var STAGES = [
      delta:{liuliang:50,taihou:100,ziwo:-35,shenjia:50,caopan:-100},type:'名利',
      feedback:'太后感动得差点掉了假睫毛（注意是「差点」，卡家的假睫毛$500一对）。你成了太后最宠爱的女儿，所有最好的资源优先给你。代价是——<strong>你签字时手在抖</strong>，因为你清楚这意味着什么。'},
     {tag:'B',text:'"解雇她！自己单干！"',
-     delta:{liuliang:-40,taihou:-150,ziwo:120,shenjia:200,caopan:100},type:'独立',
+     delta:{liuliang:-15,taihou:-150,ziwo:120,shenjia:10,caopan:100},type:'独立',
      feedback:'你离开家族后，太后在真人秀里哭诉「我失去了一个女儿」（收视率暴涨），同时<strong>暗中指示律师冻结了你名下的三处房产和两个品牌的商标</strong>。你才意识到——卡家的资源不是说断就能断的。'},
     {tag:'C',text:'"续约可以，但重谈条件——5%，不能更多"',
      delta:{liuliang:0,taihou:20,ziwo:30,shenjia:100,caopan:20},type:'商业',
@@ -124,7 +124,7 @@ var STAGES = [
   story:'太后站在你身后低声说：「<strong>宝贝，离婚是女人最好的投资。</strong>」',
   choices:[
     {tag:'A',text:'"和平分手，但孩子不许上镜。"',
-     delta:{liuliang:-30,taihou:20,ziwo:60,shenjia:10,caopan:20},type:'独立',
+     delta:{liuliang:-20,taihou:20,ziwo:60,shenjia:10,caopan:20},type:'独立',
      feedback:'你发了一份优雅的分手声明，网友评价「<strong>离婚都这么体面，不愧是顶流</strong>」。你和前夫保持了共同抚养孩子的体面关系。'},
     {tag:'B',text:'"放出他所有黑料，热搜给我霸满一周。"',
      delta:{liuliang:120,taihou:50,ziwo:-40,shenjia:50,caopan:50},type:'名利',
@@ -147,7 +147,7 @@ var STAGES = [
      triggerSideline:'kanye_possible',
      feedback:'侃爷团队递上<strong>20亿全球独家经纪合约</strong>。太后强烈反对，并且扬言要让他代言咖啡豆，侃爷只好ye憾退场。'},
     {tag:'B',text:'"姐姐们的事，我不掺和"',
-     delta:{liuliang:-20,taihou:-60,ziwo:80,shenjia:30,caopan:-50,shangyebantu:30},type:'独立',
+     delta:{liuliang:-10,taihou:-60,ziwo:80,shenjia:30,caopan:-50,shangyebantu:30},type:'独立',
      feedback:'你选择轻装上阵，不卷家族事务。太后失望但尊重你的决定，把经纪权转给了妹妹。<strong>不知道你要干嘛。</strong>'},
     {tag:'C',text:'"我要改革，把家族升级成MCN"',
      delta:{liuliang:50,taihou:30,ziwo:20,caopan:80,shangyebantu:200},type:'商业',
@@ -166,7 +166,7 @@ var STAGES = [
      delta:{liuliang:300,taihou:100,ziwo:-40,shenjia:300,caopan:100,shangyebantu:200},type:'名利',
      feedback:'首播收视破历史纪录，连续20季经久不衰，<strong>8次艾美奖提名</strong>。你成了好莱坞最有权势的女制作人。',extraDelta:{liuliang:200,shangyebantu:500},extraMultiply:{shenjia:2}},
     {tag:'B',text:'"低俗真人秀免了，我要做高端访谈节目"',
-     delta:{liuliang:-30,taihou:-50,ziwo:100,shenjia:-50,caopan:-20,shangyebantu:20},type:'独立',
+     delta:{liuliang:-20,taihou:-50,ziwo:100,shenjia:-80,caopan:-20,shangyebantu:20},type:'独立',
      feedback:'你拒绝了抓马真人秀，转而做了一档深度访谈节目。虽然收视率远不如卡家真人秀，但你采访了奥巴马夫人、比尔·盖茨、霉霉，节目<strong>拿了两个艾美奖</strong>。太后酸溜溜地说：「两个艾美奖还抵不上我一集的广告费。」'},
     {tag:'C',text:'"拍真人秀可以，但最终剪辑权必须在我手里"',
      delta:{liuliang:150,taihou:30,ziwo:10,shenjia:200,caopan:80,shangyebantu:150},type:'商业',
@@ -185,7 +185,7 @@ var STAGES = [
      delta:{liuliang:80,taihou:70,ziwo:-30,shenjia:100,caopan:50,shangyebantu:100},type:'名利',
      feedback:'婚后10年，布鲁斯公开跨性别身份，登上《名利场》封面，震惊全球。太后让你立刻切割。你选择站在伴侣身边，发表了一篇感人至深的长文。',extraDelta:{liuliang:100,taihou:-50,ziwo:50}},
     {tag:'B',text:'"我是个坚强的笨女人，不需要联姻"',
-     delta:{liuliang:-20,taihou:-40,ziwo:90,shenjia:-10,caopan:20},type:'独立',
+     delta:{liuliang:0,taihou:-40,ziwo:90,shenjia:-10,caopan:20},type:'独立',
      feedback:'你拒绝了联姻，在Ins上发了一段独白：「<strong>我是个坚强的笨女人，爱情不是交易。</strong>」视频播放量破亿，成了独立女性的宣言。太后虽然不满，但偷偷把这段视频收藏了。'},
     {tag:'C',text:'"不嫁他，但我可以当他的经纪人"',
      delta:{liuliang:30,taihou:10,ziwo:30,shenjia:50,caopan:30,shangyebantu:80},type:'商业',
@@ -204,7 +204,7 @@ var STAGES = [
      delta:{liuliang:150,taihou:100,ziwo:-60,shenjia:500,caopan:100,shangyebantu:800},type:'名利',
      feedback:'全面扩张商业版图。<strong>美国国税局IRS上门调查税务漏洞</strong>，太后让你顶包。你拿出证据让全家按股份比例共同承担，Kris当场翻脸。',extraDelta:{taihou:-180,ziwo:100,caopan:100}},
     {tag:'B',text:'"高端化。做卡戴珊的爱马仕，不做沃尔玛"',
-     delta:{liuliang:-40,taihou:-40,ziwo:70,shenjia:50,caopan:30,shangyebantu:200},type:'独立',
+     delta:{liuliang:-120,taihou:-40,ziwo:70,shenjia:-30,caopan:30,shangyebantu:200},type:'独立',
      feedback:'你砍掉所有低俗流量变现线，只保留高端线。三年后品牌登上巴黎时装周，Vogue女魔头亲自写了推荐语。太后虽然嫌你「赚得少」，但看到<strong>爱马仕总裁主动约你午餐</strong>后闭嘴了。'},
     {tag:'C',text:'"两条腿走路——高端线用主品牌，平价线用子品牌"',
      delta:{liuliang:80,taihou:40,ziwo:10,shenjia:300,caopan:50,shangyebantu:500},type:'商业',
@@ -223,13 +223,13 @@ var STAGES = [
      delta:{liuliang:500,taihou:200,ziwo:-70,shenjia:1000,caopan:200,shangyebantu:1000},type:'名利',
      feedback:'你接过权杖的那一刻，全场起立鼓掌。你成了好莱坞新一代女族长，卡戴珊帝国在你手上将迎来更加疯狂的时代。'},
     {tag:'B',text:'"我要自由。再见妈妈。"',
-     delta:{liuliang:-150,taihou:-200,ziwo:200,shenjia:-100,caopan:-200,shangyebantu:0},type:'独立',
+     delta:{liuliang:-250,taihou:-100,ziwo:200,shenjia:-100,caopan:-200,shangyebantu:0},type:'独立',
      feedback:'你摘下钻石耳环，放下爱马仕包，走出了那扇金色大门。你开车去了洛杉矶国际机场，买了一张单程票飞往巴黎。在飞机上注销了Ins、TikTok、Twitter全部社交账号——<strong>1.2亿粉丝，在按下确认键的那一刻，全部归零</strong>。空姐认出了你，问要不要升舱，你说：「不用了，经济舱就挺好。」这是你35年来第一次坐经济舱。'},
     {tag:'C',text:'"不接，但我提议——家族去kris化"',
      delta:{liuliang:50,taihou:-50,ziwo:80,caopan:100,shangyebantu:200},type:'商业',
      feedback:'你拒绝了独裁式的权力交接，提出了现代化的家族治理方案。姐妹们第一次拥有了平等的投票权。太后虽然不情愿，但承认「<strong>也许这才是家族基业长青的方式</strong>」。'},
     {tag:'D',text:'接，然后当着所有人的面撕掉它',
-     delta:{liuliang:300,taihou:-150,ziwo:150,caopan:0,shangyebantu:-200},type:'抓马',
+     delta:{liuliang:300,taihou:-80,ziwo:150,caopan:0,shangyebantu:-200},type:'抓马',
      feedback:'全场震惊。这一刻被在场的每一台手机拍下，3秒内登上全球热搜第一。你对着镜头说了一句话：「<strong>卡戴珊家族不需要女王，需要的是每个人都能做自己。</strong>」然后转身走出大门。太后——生平第一次——什么都没说。'}
   ]
 }
@@ -238,11 +238,60 @@ var STAGES = [
 
 
 // ============================================================
-// 结局数据（按优先级排序）— 2026-04-06 数值优化版
+// 结局数据（按优先级排序）— 2026-04-06 数值优化版 v2
+// 设计原则：即死维度对应的失败结局最优先，然后隐藏→成功→其余失败→兜底
 // ============================================================
 var ENDINGS = [
 
-  // ── #1 隐藏结局：抓马queen ──────────────────────────────────
+  // ═══ 第一层：即死失败结局（哪个维度爆了就进哪个）═══════════════
+
+  // ── 失败结局：精神死亡（自我≤0 即死触发）─────────────────────
+  {id:'soul_death',
+   condition:function(s){return s.ziwo<=0;},
+   title:'精神死亡',subtitle:'自我归零 · 失败结局',color:'#8B0000',
+   headline:'她彻底成为了流水线上最畅销的单品！',
+   story:'\u201C你的瞳孔里不再有光，彻底剥离了名为\u2019自我\u2019的累赘，成为了太后流水线上最畅销的单品。冷白皮、深红唇、标准弧度的假笑，你在这个华丽的名利场里，熟练地对着镜头念出那句台词：<strong>所有人保持A9。</strong>\u201D',
+   krisQuote:'（Kris拿着你的日程表，头也没抬）\u201C明天还有两个代言和一个法庭传票。去化妆。\u201D',
+   manifesto:'当你显化成功：你发现你买不到一秒钟的真实感受。',
+   persona:'太后流水线上最畅销的单品——完美傀儡',
+   isFail:true},
+
+  // ── 失败结局：严肃破产中（身价≤0 即死触发）──────────────────
+  {id:'broke',
+   condition:function(s){return s.shenjia<=0;},
+   title:'严肃破产中',subtitle:'比弗利流浪公主 · 失败结局',color:'#5D4037',
+   headline:'破产！亿万名媛沦落街头，连热狗都要分期付款！',
+   story:'\u201C法院的查封通知贴满了你曾经的豪宅大门。你的银行账户被冻结，信用卡全部作废，连最后一件Lululemon都被前夫的律师列入了资产清算清单。你试图用Ins带货翻身，但粉丝们发现你推荐的产品<strong>连你自己都买不起了</strong>。\u201D',
+   krisQuote:'Kris（沉默很久）：\u201C我教过她所有的事……就是没教她存钱。这是我最大的失误。\u201D',
+   manifesto:'当你显化成功：你发现没有了钱，你也终于有时间了。',
+   persona:'比弗利山庄的流浪公主，用破产证明了钱真的很重要',
+   isFail:true},
+
+  // ── 失败结局：过气顶流（流量≤0 即死触发）──────────────────────
+  {id:'forgotten',
+   condition:function(s){return s.liuliang<=0;},
+   title:'过气顶流',subtitle:'互联网遗忘者 · 失败结局',color:'#455A64',
+   headline:'谁？一代顶流彻底消失，连狗仔都懒得跟拍了！',
+   story:'\u201C你发了一条Ins，24小时后点赞数是——3个，其中一个还是你自己的小号。你从全美热搜常客变成了互联网透明人。算法把你的内容推到第1000页之后，和那些卖假包的广告排在一起。你试过蹭热点、搞争议、甚至在直播里当众剃头，但流量的规则很简单：这个世界已经有了新的卡戴珊，而<strong>你只是旧版本的缓存</strong>。\u201D',
+   krisQuote:'Kris（摊手）：\u201C商业的尽头不是利润，是关注度。她把关注度都输光了。\u201D',
+   manifesto:'当你显化成功：钱买不到算法的青睐，你已经是昨天的话题了。',
+   persona:'互联网遗忘者，一个被时代抛下的旧版本',
+   isFail:true},
+
+  // ── 失败结局：逐出卡门（太后好感≤0 即死触发）──────────────────
+  {id:'exile',
+   condition:function(s){return s.taihou<=0;},
+   title:'逐出「卡」门',subtitle:'家族除名 · 失败结局',color:'#37474F',
+   headline:'太后清理门户！亲生女儿惨遭家族除名，被P成盆栽！',
+   story:'\u201C太后终于做了她威胁了20年的事——把你从卡戴珊家族除名。你的名字从家族信托基金里被划掉，真人秀的所有镜头都被剪掉，甚至连家族合影里你的脸都被P成了<strong>一盆绿植</strong>。\u201D',
+   krisQuote:'Kris：\u201C我有一个女儿……没有了。我有四个女儿。一株绿植。\u201D',
+   manifesto:'当你显化成功：你发现家族的黑卡已经停用了。',
+   persona:'卡戴珊宇宙的异类，被P成盆栽的家族传说',
+   isFail:true},
+
+  // ═══ 第二层：隐藏结局 ═══════════════════════════════════════
+
+  // ── 隐藏结局：抓马queen ──────────────────────────────────────
   {id:'chaos',
    condition:function(s){return (s._allDramaCount||0)>=5;},
    title:'抓马queen',subtitle:'隐藏结局',color:'#FFD700',
@@ -252,111 +301,9 @@ var ENDINGS = [
    manifesto:'当你显化成功：没人知道你会做什么，包括你自己。但不管做什么，都能显化成功！',
    persona:'无法被定义的存在，让AI都算不出下一步的抓马女王'},
 
-  // ── #2 成功结局：Queen never cry ──────────────────────────
-  {id:'taihou2',
-   condition:function(s){return s.caopan>=200&&s.taihou>=150;},
-   title:'Queen never cry',subtitle:'好莱坞女族长',color:'#E5173F',
-   headline:'权力交接！她把整个好莱坞踩在了定制高跟鞋下！',
-   story:'\u201C恭喜你，屠龙者终成恶龙。有天，你测自己的MBTI发现是——KRIS，富态者。你坐在比弗利山庄的王座上，冷眼看着妹妹们为了一个热搜大打出手，就像当年太后看着你一样。\u201D',
-   krisQuote:'\u201Clet that shit go nyeah💅\u201D',
-   manifesto:'当你显化成功：你会给自己找了个 sugar mommy，让她教你如何优雅的使用刀叉。',
-   persona:'新一代名利场女王，用铁腕统治娱乐帝国的女族长'},
+  // ═══ 第三层：傀儡女王（操盘权失去）═══════════════════════════
 
-  // ── #3 成功结局：疯狂星期四的M女王（前移到 wallstreet 之前）──
-  {id:'fastfood',
-   condition:function(s){return s.shangyebantu>=1000&&s.ziwo<100;},
-   title:'疯狂星期四的M女王',subtitle:'快消帝国女皇',color:'#E67E22',
-   headline:'吃鸡暴富！每一口炸鸡都是她的ATM！',
-   story:'\u201C你没有选择做高冷的奢侈品，而是把自己的波普头像印在了全球几万家连锁快餐的炸鸡盒和咖啡杯上。只要有人摄入垃圾食品，就在为你交版税。<strong>你是资本主义最精致的产品——一个活着的品牌logo。</strong>\u201D',
-   krisQuote:'\u201C我的女儿把自己活成了一个商标。我骄傲得简直要哭到我的版税支票上了。🍗\u201D',
-   manifesto:'当你显化成功：你会收购KFC和麦当劳，把老爷爷的头像全部换成自己、把M变成翘臀。',
-   persona:'快消品帝国的女皇，把自己活成了全球最赚钱的logo'},
-
-  // ── #4 成功结局：老娘独享经济 ──────────────────────────────
-  {id:'wallstreet',
-   condition:function(s){return s.shangyebantu>=1000&&s.taihou<50;},
-   title:'老娘独享经济',subtitle:'独立商业女王',color:'#2ECC71',
-   headline:'决裂与重生！她证明了不靠家族也能赚到十亿美金！',
-   story:'\u201C你亲手撕碎了家族的真人秀剧本，从太后的事业里叛逃出来，白手起家建立了自己的商业王国。没有抓马，没有艳舞，只有你一个人对着全世界证明——<strong>离开了\u2019卡戴珊\u2019这个姓氏，你依然能站在财富的顶端。</strong>\u201D',
-   krisQuote:'\u201C她不需要我了…这是我唯一没有预料到的事。💔\u201D',
-   manifesto:'当你显化成功：你第一件事会是买黄金，没有然后，因为你亏了一半及时止损了。',
-   persona:'华尔街的卡戴珊异类，用商业头脑碾压名利场的独立女王'},
-
-  // ── #5 成功结局：没有不上热搜的义务 ──────────────────────
-  {id:'topchart',
-   condition:function(s){return s.liuliang>=600&&s.shenjia>=300;},
-   title:'没有不上热搜的义务',subtitle:'真人秀传奇',color:'#1E90FF',
-   headline:'流量至死！她用整个人生上演了一场楚门的世界！',
-   story:'\u201C你是互联网时代的热搜制造者。你把自己的婚姻、生育、背叛全部明码标价，包装成20季经久不衰的下饭电子榨菜。你养活了半个娱乐圈的狗仔，但<strong>当深夜摄像机关机时，你甚至想不起来自己真实的性格是什么。</strong>\u201D',
-   krisQuote:'\u201C镜头爱她。观众爱她。她爱自己吗？…那不是我的业务范围。📺\u201D',
-   manifesto:'当你显化成功：你会把自己的脸注册成了商标，每次有人P你的图都要付版权费。',
-   persona:'互联网时代的真人秀之神，把人生活成了最赚钱的连续剧'},
-
-  // ── #6 成功结局：再见了所有卡戴珊战士 ────────────────────
-  {id:'retire',
-   condition:function(s){return s.ziwo>=200&&s.shenjia<200&&s.shenjia>-5&&s.liuliang>-20;},
-   title:'再见了所有卡戴珊战士',subtitle:'平凡觉醒者',color:'#9B59B6',
-   headline:'疯了还是醒了？百亿名媛放弃一切消失在人海！',
-   story:'\u201C你在名利场的巅峰按下了暂停键。你剪断了所有网线，注销了上亿粉丝的账号，隐居在普罗旺斯的石头小镇。你穿着沾满颜料的围裙在画室里度过余生，房东老太太教你种薰衣草。你是卡戴珊家族百年历史上，<strong>唯一一个拥有完整灵魂的\u2019普通人\u2019</strong>。咖啡馆墙上还挂着你画的第一幅日落。\u201D',
-   krisQuote:'\u201C她为了一种我永远无法理解的生活离开了帝国。但她笑起来是真心的…我甚至记不清那种感觉了。🌅\u201D',
-   manifesto:'当你显化成功：你会把所有的钱换成了一栋老房子、一个花园，和一辈子画不完的日落。',
-   persona:'名利场的叛逆者，选择灵魂自由的普罗旺斯画家'},
-
-  // ── #7 成功结局：雅思8.5高学历拥有者 ──────────────────────
-  {id:'scholar',
-   condition:function(s){return s.ziwo>=180&&s.liuliang<80&&s.liuliang>-20&&s.taihou<30;},
-   title:'雅思8.5高学历拥有者',subtitle:'精神自由者',color:'#00897B',
-   headline:'家族之耻？高智商怪咖惨遭卡戴珊除名！',
-   story:'\u201C拒绝整容、拒绝炒作，你甚至去欧洲读了一个哲学博士。你成了家族合照里被裁掉的那个人。你虽然被妈妈Kris Jenner彻底除名，但你拥有了<strong>绝对清醒的头脑和无价的精神自由</strong>。\u201D',
-   krisQuote:'\u201C我有……一个生产论文的女儿。我们不提这件事。📚\u201D',
-   manifesto:'当你显化成功：你会发现你根本不需要钱。你写的博士论文《如何用臀部顶起一瓶汽水迷思》在构石发表，被引用了3000次。',
-   persona:'卡家的学术异类，用哲学博士证明了灵魂比翘臀更有价值'},
-
-  // ── #8 失败结局：精神死亡（自我≤-20）─────────────────────────
-  {id:'soul_death',
-   condition:function(s){return s.ziwo<=-20;},
-   title:'精神死亡',subtitle:'自我归零 · 失败结局',color:'#8B0000',
-   headline:'她彻底成为了流水线上最畅销的单品！',
-   story:'\u201C你的瞳孔里不再有光，彻底剥离了名为\u2019自我\u2019的累赘，成为了太后流水线上最畅销的单品。冷白皮、深红唇、标准弧度的假笑，你在这个华丽的名利场里，熟练地对着镜头念出那句台词：<strong>所有人保持A9。</strong>\u201D',
-   krisQuote:'（Kris拿着你的日程表，头也没抬）\u201C明天还有两个代言和一个法庭传票。去化妆。\u201D',
-   manifesto:'当你显化成功：你发现你买不到一秒钟的真实感受。',
-   persona:'太后流水线上最畅销的单品——完美傀儡',
-   isFail:true},
-
-  // ── #9 失败结局：严肃破产中（身价≤-5）──────────────────────
-  {id:'broke',
-   condition:function(s){return s.shenjia<=-5;},
-   title:'严肃破产中',subtitle:'比弗利流浪公主 · 失败结局',color:'#5D4037',
-   headline:'破产！亿万名媛沦落街头，连热狗都要分期付款！',
-   story:'\u201C法院的查封通知贴满了你曾经的豪宅大门。你的银行账户被冻结，信用卡全部作废，连最后一件Lululemon都被前夫的律师列入了资产清算清单。你试图用Ins带货翻身，但粉丝们发现你推荐的产品<strong>连你自己都买不起了</strong>。\u201D',
-   krisQuote:'Kris（沉默很久）：\u201C我教过她所有的事……就是没教她存钱。这是我最大的失误。\u201D',
-   manifesto:'当你显化成功：你发现没有了钱，你也终于有时间了。',
-   persona:'比弗利山庄的流浪公主，用破产证明了钱真的很重要',
-   isFail:true},
-
-  // ── #10 失败结局：逐出卡门（太后好感≤-150）──────────────────
-  {id:'exile',
-   condition:function(s){return s.taihou<=-150;},
-   title:'逐出「卡」门',subtitle:'家族除名 · 失败结局',color:'#37474F',
-   headline:'太后清理门户！亲生女儿惨遭家族除名，被P成盆栽！',
-   story:'\u201C太后终于做了她威胁了20年的事——把你从卡戴珊家族除名。你的名字从家族信托基金里被划掉，真人秀的所有镜头都被剪掉，甚至连家族合影里你的脸都被P成了<strong>一盆绿植</strong>。\u201D',
-   krisQuote:'Kris：\u201C我有一个女儿……没有了。我有四个女儿。一株绿植。\u201D',
-   manifesto:'当你显化成功：你发现家族的黑卡已经停用了。',
-   persona:'卡戴珊宇宙的异类，被P成盆栽的家族传说',
-   isFail:true},
-
-  // ── #11 失败结局：过气顶流（流量≤-20）─────────────────────────
-  {id:'forgotten',
-   condition:function(s){return s.liuliang<=-20;},
-   title:'过气顶流',subtitle:'互联网遗忘者 · 失败结局',color:'#455A64',
-   headline:'谁？一代顶流彻底消失，连狗仔都懒得跟拍了！',
-   story:'\u201C你发了一条Ins，24小时后点赞数是——3个，其中一个还是你自己的小号。你从全美热搜常客变成了互联网透明人。算法把你的内容推到第1000页之后，和那些卖假包的广告排在一起。你试过蹭热点、搞争议、甚至在直播里当众剃头，但流量的规则很简单：这个世界已经有了新的卡戴珊，而<strong>你只是旧版本的缓存</strong>。\u201D',
-   krisQuote:'Kris（摊手）：\u201C商业的尽头不是利润，是关注度。她把关注度都输光了。\u201D',
-   manifesto:'当你显化成功：钱买不到算法的青睐，你已经是昨天的话题了。',
-   persona:'互联网遗忘者，一个被时代抛下的旧版本',
-   isFail:true},
-
-  // ── #12 失败结局：傀儡女王（操盘权曾>50后归0）────────────────
+  // ── 失败结局：傀儡女王（操盘权曾>50后归0）────────────────────
   {id:'puppet',
    condition:function(s){return s.caopan<=0&&(s._maxCaopanEver||0)>50;},
    title:'傀儡女王',subtitle:'精致提线木偶 · 失败结局',color:'#4A148C',
@@ -367,7 +314,74 @@ var ENDINGS = [
    persona:'卡家最华丽的摆设，一个没有灵魂的金色傀儡',
    isFail:true},
 
-  // ── #13 兜底结局：九位数NPC ──────────────────────────────────
+  // ═══ 第四层：成功结局 ═══════════════════════════════════════
+
+  // ── 成功结局：Queen never cry ──────────────────────────────
+  {id:'taihou2',
+   condition:function(s){return s.caopan>=200&&s.taihou>=150;},
+   title:'Queen never cry',subtitle:'好莱坞女族长',color:'#E5173F',
+   headline:'权力交接！她把整个好莱坞踩在了定制高跟鞋下！',
+   story:'\u201C恭喜你，屠龙者终成恶龙。有天，你测自己的MBTI发现是——KRIS，富态者。你坐在比弗利山庄的王座上，冷眼看着妹妹们为了一个热搜大打出手，就像当年太后看着你一样。\u201D',
+   krisQuote:'\u201Clet that shit go nyeah💅\u201D',
+   manifesto:'当你显化成功：你会给自己找了个 sugar mommy，让她教你如何优雅的使用刀叉。',
+   persona:'新一代名利场女王，用铁腕统治娱乐帝国的女族长'},
+
+  // ── 成功结局：疯狂星期四的M女王 ──────────────────────────────
+  // 商业版图高 + 自我偏低 + 太后关系还行
+  {id:'fastfood',
+   condition:function(s){return s.shangyebantu>=800&&s.ziwo<250&&s.taihou>0;},
+   title:'疯狂星期四的M女王',subtitle:'快消帝国女皇',color:'#E67E22',
+   headline:'吃鸡暴富！每一口炸鸡都是她的ATM！',
+   story:'\u201C你没有选择做高冷的奢侈品，而是把自己的波普头像印在了全球几万家连锁快餐的炸鸡盒和咖啡杯上。只要有人摄入垃圾食品，就在为你交版税。<strong>你是资本主义最精致的产品——一个活着的品牌logo。</strong>\u201D',
+   krisQuote:'\u201C我的女儿把自己活成了一个商标。我骄傲得简直要哭到我的版税支票上了。🍗\u201D',
+   manifesto:'当你显化成功：你会收购KFC和麦当劳，把老爷爷的头像全部换成自己、把M变成翘臀。',
+   persona:'快消品帝国的女皇，把自己活成了全球最赚钱的logo'},
+
+  // ── 成功结局：老娘独享经济 ──────────────────────────────────
+  // 商业版图高 + 独立路线（到终局太后好感可能很低但>0因为<0即死）
+  {id:'wallstreet',
+   condition:function(s){return s.shangyebantu>=800;},
+   title:'老娘独享经济',subtitle:'独立商业女王',color:'#2ECC71',
+   headline:'决裂与重生！她证明了不靠家族也能赚到十亿美金！',
+   story:'\u201C你亲手撕碎了家族的真人秀剧本，从太后的事业里叛逃出来，白手起家建立了自己的商业王国。没有抓马，没有艳舞，只有你一个人对着全世界证明——<strong>离开了\u2019卡戴珊\u2019这个姓氏，你依然能站在财富的顶端。</strong>\u201D',
+   krisQuote:'\u201C她不需要我了…这是我唯一没有预料到的事。💔\u201D',
+   manifesto:'当你显化成功：你第一件事会是买黄金，没有然后，因为你亏了一半及时止损了。',
+   persona:'华尔街的卡戴珊异类，用商业头脑碾压名利场的独立女王'},
+
+  // ── 成功结局：没有不上热搜的义务 ──────────────────────────
+  {id:'topchart',
+   condition:function(s){return s.liuliang>=700&&s.shenjia>=500;},
+   title:'没有不上热搜的义务',subtitle:'真人秀传奇',color:'#1E90FF',
+   headline:'流量至死！她用整个人生上演了一场楚门的世界！',
+   story:'\u201C你是互联网时代的热搜制造者。你把自己的婚姻、生育、背叛全部明码标价，包装成20季经久不衰的下饭电子榨菜。你养活了半个娱乐圈的狗仔，但<strong>当深夜摄像机关机时，你甚至想不起来自己真实的性格是什么。</strong>\u201D',
+   krisQuote:'\u201C镜头爱她。观众爱她。她爱自己吗？…那不是我的业务范围。📺\u201D',
+   manifesto:'当你显化成功：你会把自己的脸注册成了商标，每次有人P你的图都要付版权费。',
+   persona:'互联网时代的真人秀之神，把人生活成了最赚钱的连续剧'},
+
+  // ── 成功结局：雅思8.5高学历拥有者 ──────────────────────────
+  // 高自我 + 低流量（独立学术路线）— 排在 retire 前面
+  {id:'scholar',
+   condition:function(s){return s.ziwo>=250&&s.liuliang<300;},
+   title:'雅思8.5高学历拥有者',subtitle:'精神自由者',color:'#00897B',
+   headline:'家族之耻？高智商怪咖惨遭卡戴珊除名！',
+   story:'\u201C拒绝整容、拒绝炒作，你甚至去欧洲读了一个哲学博士。你成了家族合照里被裁掉的那个人。你虽然被妈妈Kris Jenner彻底除名，但你拥有了<strong>绝对清醒的头脑和无价的精神自由</strong>。\u201D',
+   krisQuote:'\u201C我有……一个生产论文的女儿。我们不提这件事。📚\u201D',
+   manifesto:'当你显化成功：你会发现你根本不需要钱。你写的博士论文《如何用臀部顶起一瓶汽水迷思》在构石发表，被引用了3000次。',
+   persona:'卡家的学术异类，用哲学博士证明了灵魂比翘臀更有价值'},
+
+  // ── 成功结局：再见了所有卡戴珊战士 ──────────────────────────
+  {id:'retire',
+   condition:function(s){return s.ziwo>=300;},
+   title:'再见了所有卡戴珊战士',subtitle:'平凡觉醒者',color:'#9B59B6',
+   headline:'疯了还是醒了？百亿名媛放弃一切消失在人海！',
+   story:'\u201C你在名利场的巅峰按下了暂停键。你剪断了所有网线，注销了上亿粉丝的账号，隐居在普罗旺斯的石头小镇。你穿着沾满颜料的围裙在画室里度过余生，房东老太太教你种薰衣草。你是卡戴珊家族百年历史上，<strong>唯一一个拥有完整灵魂的\u2019普通人\u2019</strong>。咖啡馆墙上还挂着你画的第一幅日落。\u201D',
+   krisQuote:'\u201C她为了一种我永远无法理解的生活离开了帝国。但她笑起来是真心的…我甚至记不清那种感觉了。🌅\u201D',
+   manifesto:'当你显化成功：你会把所有的钱换成了一栋老房子、一个花园，和一辈子画不完的日落。',
+   persona:'名利场的叛逆者，选择灵魂自由的普罗旺斯画家'},
+
+  // ═══ 第五层：兜底结局 ═══════════════════════════════════════
+
+  // ── 兜底结局：九位数NPC ──────────────────────────────────────
   {id:'npc',
    condition:function(s){return true;},
    title:'一个保持九位数余额的NPC',subtitle:'默认结局',color:'#7F8C8D',
@@ -558,12 +572,9 @@ function onChoiceClick(stageIdx,choiceIdx){
   if((GameState.stats.shangyebantu||0)>(GameState.stats._maxEmpireEver||0))
     GameState.stats._maxEmpireEver=GameState.stats.shangyebantu;
   updateStatsUI();
-  if(GameState.stats.ziwo<=-30){
-    setTimeout(function(){showEnding();},1800);
-    return;
-  }
-  // 新增：其他维度失败检测（下调即死线，为负数区间结局留空间）
-  if(GameState.stats.shenjia<=-10||GameState.stats.liuliang<=-30||GameState.stats.taihou<=-200){
+  // 即死检测：任何维度降到0以下都会触发即死结算
+  var st=GameState.stats;
+  if(st.ziwo<=0||st.shenjia<=0||st.liuliang<=0||st.taihou<=0){
     setTimeout(function(){showEnding();},1800);
     return;
   }
