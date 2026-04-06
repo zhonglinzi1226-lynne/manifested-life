@@ -1407,7 +1407,78 @@ html, body {
 }
 .ending-share-tip strong { color: #FFD700; }
 
-/* ⑨ 重玩按钮 */
+/* ⑨ 打赏区 */
+.tip-zone {
+  padding: 0;
+  background: #0f0f0f;
+  border-top: 2px solid #000;
+  overflow: hidden;
+}
+.tip-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'PingFang SC','Hiragino Sans GB',sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.tip-toggle:hover { color: #FFD700; }
+.tip-toggle .tip-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 10px;
+}
+.tip-toggle.open .tip-arrow { transform: rotate(180deg); }
+.tip-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 12px;
+}
+.tip-content.show {
+  max-height: 400px;
+  padding: 6px 12px 14px;
+}
+.tip-subtitle {
+  text-align: center;
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.tip-qr-row {
+  display: flex;
+  justify-content: center;
+}
+.tip-qr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.tip-qr-item img {
+  width: 120px; height: 120px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,215,0,0.3);
+  background: #fff;
+  padding: 3px;
+  object-fit: contain;
+}
+.tip-qr-label {
+  font-size: 9px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+/* ⑩ 重玩按钮 */
 .replay-btn {
   display: block; width: 100%;
   padding: 10px;

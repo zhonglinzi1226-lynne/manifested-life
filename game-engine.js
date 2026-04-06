@@ -790,6 +790,18 @@ function buildEndingCard(card, e, s, isSideline){
     +gridHtml
     // ⑥ 二维码 + 分享文案（紧凑横排）
     +shareZoneHtml
+    // ⑦ 打赏区（默认折叠）
+    +'<div class="tip-zone">'
+    +'<button class="tip-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">'
+    +'💅 制作不易，欢迎打赏！这次我们可以提现吗？ <span class="tip-arrow">▼</span>'
+    +'</button>'
+    +'<div class="tip-content">'
+    +'<div class="tip-subtitle">by yuki & 0子 🫶</div>'
+    +'<div class="tip-qr-row">'
+    +'<div class="tip-qr-item"><img src="tip-qr/tip.jpg" alt="赞赏码"></div>'
+    +'</div>'
+    +'</div>'
+    +'</div>'
     // 重玩按钮
     +'<button class="replay-btn" onclick="replayGame()">🔄 重新投胎</button>'
     +'<canvas id="posterCanvas" style="display:none;"></canvas>';
