@@ -1798,10 +1798,10 @@ html, body {
 var GameState = {
   playerName: '',
   stats: {
-    liuliang:       80,   // 流量 CLOUT（提高容错）
-    taihou:         80,   // 太后好感 MOMAGER（提高容错）
-    shenjia:        20,   // 身价(百万) NET WORTH（提高容错）
-    ziwo:           80,   // 自我 SOUL（提高容错）
+    liuliang:       80,   // 流量 CLOUT
+    taihou:        100,   // 太后好感 MOMAGER（+20缓冲，防前期即死）
+    shenjia:        20,   // 身价(百万) NET WORTH
+    ziwo:          100,   // 自我 SOUL（+20缓冲，防前期即死）
     caopan:          0,   // 操盘权 POWER
     shangyebantu:    0    // 商业版图(百万) EMPIRE
   },

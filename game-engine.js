@@ -12,7 +12,7 @@ var STAGES = [
   story:'<strong>比弗利山庄卡戴珊豪宅客厅</strong>。粉色羊绒地毯上摆满摄像机，全美200万观众在线蹲守你的周岁生日派对。太后把嘴贴在你耳边说：「听着宝贝，大哭，越委屈越好。<strong>镜头前没有流泪，只有流量！</strong>这是卡戴珊家的第一课。」',
   choices:[
     {tag:'A',text:'嚎啕大哭，一把抢过姐姐的洋娃娃',
-     delta:{liuliang:30,taihou:25,ziwo:-20,shenjia:2},type:'名利',
+     delta:{liuliang:30,taihou:25,ziwo:-20,shenjia:2,caopan:10},type:'名利',
      feedback:'你的哭戏堪比奥斯卡，KTV频道收视率暴涨，太后当场签下了你的第一份婴儿食品代言——代言的是四牛奶粉，后来被曝出有造假，你第一时间站队取消代言。万幸的是成长很健康。'},
     {tag:'B',text:'面无表情地对着镜头疯狂翻白眼',
      delta:{liuliang:5,taihou:-25,ziwo:30},type:'独立',
@@ -34,7 +34,7 @@ var STAGES = [
   story:'<strong>比弗利山庄顶级医美诊所的VIP室</strong>。墙上挂着卡戴珊全家的前后对比照，桌上放着丝芙兰上亿美妆代言合约。妈妈用指尖敲了敲3D建模图上你的鼻子和臀部：「亲爱的，看看金的屁股、凯莉的嘴唇，这就是我们家的印钞机。你的鼻子不够翘，臀部不够饱满，上镜就是扁平的。<strong>做完它，这份独家代言就是你的。</strong>」',
   choices:[
     {tag:'A',text:'"妈，给我来全套，鼻子、下巴、臀部一步到位"',
-     delta:{liuliang:50,taihou:35,ziwo:-30,shenjia:10},type:'名利',
+     delta:{liuliang:50,taihou:35,ziwo:-30,shenjia:10,caopan:15},type:'名利',
      triggerSideline:'korea',
      feedback:'手术大获成功！翘臀和精致鼻子直接登上八卦头条。但一周后飞迈阿密参加派对，过机场安检时臀部假体里的微量金属标识触发了探测器，安检员当着全机场的人给你做二次安检，严肃问「身上是不是藏了违禁品」。路人拍下视频发到网上，<strong>#[name]翘臀暗藏玄机#</strong> 笑上热搜。',extraDelta:{liuliang:10}},
     {tag:'B',text:'"只做嘴唇，别的我自己说了算"',
@@ -44,7 +44,7 @@ var STAGES = [
      delta:{liuliang:-25,taihou:-30,ziwo:40,shenjia:-3},type:'独立',
      feedback:'前姐夫侃爷凌晨3点连发17条推特，置顶一条：「<strong>卡家军里唯一清醒的女士！</strong>」你的Ins一夜涨粉120万，流量直接飙升，但太后看到后当场气炸，冻结了你名下所有黑卡、信用卡，还把你从真人秀主镜头里剪掉了3集。',extraDelta:{liuliang:50}},
     {tag:'D',text:'"我不做，但我可以代言医美品牌再暗中劝退别人整容"',
-     delta:{liuliang:30,taihou:-20,ziwo:20,shangyebantu:15},type:'商业',
+     delta:{liuliang:30,taihou:-20,ziwo:20,shangyebantu:15,caopan:10},type:'商业',
      feedback:'你签下了医美品牌代言，拍了一组「自然美」大片，暗中在Ins story里发「爱自己本来的样子」。两边通吃的操作被网友称为「<strong>薛定谔的整容</strong>」——你既是医美代言人，又是自然美倡导者。商业天才还是两面派？网友吵翻了，但不管站哪边都在给我贡献流量。'}
   ]
 },
@@ -60,10 +60,10 @@ var STAGES = [
      delta:{liuliang:-10,taihou:-25,ziwo:50,shenjia:-10},type:'独立',
      feedback:'花光了所有存款买断了母带，媒体虽然没了视频但还是写了一篇「<strong>卡家千金花天价捂盖子</strong>」的报道。太后三天没和你说话，但你在浴室镜子里对自己说了句「至少这是你自己的选择」。'},
     {tag:'B',text:'"不小心流出，这次一定要提现！"',
-     delta:{liuliang:150,taihou:30,ziwo:-45,shenjia:100},type:'名利',
+     delta:{liuliang:150,taihou:30,ziwo:-45,shenjia:100,caopan:20},type:'名利',
      feedback:'视频「意外」流出，你一夜之间从「卡家小透明」变成全球热搜第一。太后在你成为顶流的第二天就帮你签下了三个代言。Ins粉丝暴涨2000万，代价是——<strong>每条评论区都有人发那个视频的截图</strong>。'},
     {tag:'C',text:'"自己先发声明说视频是AI换脸的"',
-     delta:{liuliang:80,taihou:-10,ziwo:20,shenjia:30},type:'商业',
+     delta:{liuliang:80,taihou:-10,ziwo:20,shenjia:30,caopan:10},type:'商业',
      feedback:'你抢在媒体前面发了一份措辞严厉的律师函，声称视频是AI deepfake。虽然大家心知肚明，但这招居然有效——视频变成了「<strong>薛定谔的录像带</strong>」，没人能确认真假。你趁机接下了一个AI安全公司的代言，并在发布会上与硅谷钢铁侠马斯克短暂邂逅。'},
     {tag:'D',text:'"给前男友打电话：咱俩一起开个OnlyFans吧"',
      delta:{liuliang:200,taihou:55,ziwo:-55,shenjia:150},type:'抓马',
@@ -80,7 +80,7 @@ var STAGES = [
   story:'<strong>发布会前24小时</strong>，TMZ爆出你男友酒店出轨的视频。<strong>#[name]男友出轨#</strong> 冲上热搜第一，品牌官号评论区被冲爆，所有人都在等你的态度。太后拿着公关稿和彩妆新品色号表冲进来，眼神锐利：「<strong>听着，这不是灾难，这是机会。明天你化着淡妆、红着眼圈上台，宣布『坚强系列』唇釉同步上线。</strong>」',
   choices:[
     {tag:'A',text:'"我妈比我会做营销！假哭我在行。"',
-     delta:{liuliang:120,taihou:40,ziwo:-30,shangyebantu:200},type:'名利',
+     delta:{liuliang:120,taihou:40,ziwo:-30,shangyebantu:200,caopan:20},type:'名利',
      stage4Branch:'drama',
      feedback:'你的「坚强大女主」发布会爆了，<strong>#[name]要坚强#</strong> 霸榜热搜3天，「不完美日记」坚强系列上线10分钟售罄，品牌估值直接翻3倍。但前男友接受采访说你「把感情当成了流量工具」，你回应：「这次我一定要变现！」'},
     {tag:'B',text:'"这是私事，低调处理就行。"',
@@ -88,7 +88,7 @@ var STAGES = [
      stage4Branch:'grace',
      feedback:'你发了一条简短声明「私人感情问题私下处理」，取消发布会所有煽情环节。销量只卖了预期30%，太后气得一周没和你说话，说你「浪费了天赐的流量机会」。但你和男友和平分手，<strong>保留了最后的体面</strong>。'},
     {tag:'C',text:'"如果出轨对象愿意配合，搞三方联名"',
-     delta:{liuliang:200,taihou:20,ziwo:-35,shangyebantu:100},type:'抓马',
+     delta:{liuliang:200,taihou:20,ziwo:-35,shangyebantu:100,caopan:15},type:'抓马',
      stage4Branch:'drama',
      feedback:'你、前男友、出轨网红三个人一起上了真人秀「三角恋特辑」，收视爆炸。推出了「三角关系」三色唇釉套装，<strong>每盒附赠一张前男友的道歉卡</strong>。网友惊呼「资本主义的终极形态」。太后在幕后笑得合不拢嘴。'}
   ]
@@ -223,7 +223,7 @@ var STAGES = [
      delta:{liuliang:500,taihou:200,ziwo:-100,shenjia:1000,caopan:200,shangyebantu:1000},type:'名利',
      feedback:'你接过权杖的那一刻，全场起立鼓掌。你成了好莱坞新一代女族长，卡戴珊帝国在你手上将迎来更加疯狂的时代。'},
     {tag:'B',text:'"我要自由。再见妈妈。"',
-     delta:{liuliang:-350,taihou:-80,ziwo:200,shenjia:-150,caopan:-200,shangyebantu:0},type:'独立',
+     delta:{liuliang:-200,taihou:-50,ziwo:200,shenjia:-50,caopan:-200,shangyebantu:0},type:'独立',
      feedback:'你摘下钻石耳环，放下爱马仕包，走出了那扇金色大门。你开车去了洛杉矶国际机场，买了一张单程票飞往巴黎。在飞机上注销了Ins、TikTok、Twitter全部社交账号——<strong>1.2亿粉丝，在按下确认键的那一刻，全部归零</strong>。空姐认出了你，问要不要升舱，你说：「不用了，经济舱就挺好。」这是你35年来第一次坐经济舱。'},
     {tag:'C',text:'"不接，但我提议——家族去kris化"',
      delta:{liuliang:50,taihou:-50,ziwo:80,caopan:100,shangyebantu:200},type:'商业',
@@ -319,6 +319,18 @@ var ENDINGS = [
 
   // ═══ 第四层：成功结局（按限制性从强到弱排列）══════════════════
 
+  // ── 成功结局：疯狂星期四的M女王 ──────────────────────────────
+  // 条件：商业版图≥900 且 自我≤200 且 操盘权<250 → 商业做大但自我缺失
+  // 排在QNC前面，且加caopan<250避免纯权力路线被截胡
+  {id:'fastfood',
+   condition:function(s){return s.shangyebantu>=900&&s.ziwo<=200&&s.caopan<250;},
+   title:'疯狂星期四的M女王',subtitle:'快消帝国女皇',color:'#E67E22',
+   headline:'吃鸡暴富！每一口炸鸡都是她的ATM！',
+   story:'\u201C你没有选择做高冷的奢侈品，而是把自己的波普头像印在了全球几万家连锁快餐的炸鸡盒和咖啡杯上。只要有人摄入垃圾食品，就在为你交版税。<strong>你是资本主义最精致的产品——一个活着的品牌logo。</strong>\u201D',
+   krisQuote:'\u201C我的女儿把自己活成了一个商标。我骄傲得简直要哭到我的版税支票上了。🍗\u201D',
+   manifesto:'当你显化成功：你会收购KFC和麦当劳，把老爷爷的头像全部换成自己、把M变成翘臀。',
+   persona:'快消品帝国的女皇，把自己活成了全球最赚钱的logo'},
+
   // ── 成功结局：Queen never cry ──────────────────────────────
   // 条件：操盘权≥300 且 太后好感≥250 → 权力继承者路线
   {id:'taihou2',
@@ -329,17 +341,6 @@ var ENDINGS = [
    krisQuote:'\u201Clet that shit go nyeah💅\u201D',
    manifesto:'当你显化成功：你会给自己找了个 sugar mommy，让她教你如何优雅的使用刀叉。',
    persona:'新一代名利场女王，用铁腕统治娱乐帝国的女族长'},
-
-  // ── 成功结局：疯狂星期四的M女王 ──────────────────────────────
-  // 条件：商业版图≥1200 且 自我≤200 → 商业做大但自我缺失
-  {id:'fastfood',
-   condition:function(s){return s.shangyebantu>=1200&&s.ziwo<=200;},
-   title:'疯狂星期四的M女王',subtitle:'快消帝国女皇',color:'#E67E22',
-   headline:'吃鸡暴富！每一口炸鸡都是她的ATM！',
-   story:'\u201C你没有选择做高冷的奢侈品，而是把自己的波普头像印在了全球几万家连锁快餐的炸鸡盒和咖啡杯上。只要有人摄入垃圾食品，就在为你交版税。<strong>你是资本主义最精致的产品——一个活着的品牌logo。</strong>\u201D',
-   krisQuote:'\u201C我的女儿把自己活成了一个商标。我骄傲得简直要哭到我的版税支票上了。🍗\u201D',
-   manifesto:'当你显化成功：你会收购KFC和麦当劳，把老爷爷的头像全部换成自己、把M变成翘臀。',
-   persona:'快消品帝国的女皇，把自己活成了全球最赚钱的logo'},
 
   // ── 成功结局：老娘独享经济 ──────────────────────────────────
   // 条件：商业版图≥800 且 太后好感≤50 → 脱离家族靠自己的独立商业路线
@@ -363,27 +364,28 @@ var ENDINGS = [
    manifesto:'当你显化成功：你会把自己的脸注册成了商标，每次有人P你的图都要付版权费。',
    persona:'互联网时代的真人秀之神，把人生活成了最赚钱的连续剧'},
 
-  // ── 成功结局：雅思8.5高学历拥有者 ──────────────────────────
-  // 条件：自我≥180 且 流量≤550 且 商业版图≤600 → 拒绝名利走学术路线
-  {id:'scholar',
-   condition:function(s){return s.ziwo>=180&&s.liuliang<=550&&s.shangyebantu<=600;},
-   title:'雅思8.5高学历拥有者',subtitle:'精神自由者',color:'#00897B',
-   headline:'家族之耻？高智商怪咖惨遭卡戴珊除名！',
-   story:'\u201C拒绝整容、拒绝炒作，你甚至去欧洲读了一个哲学博士。你成了家族合照里被裁掉的那个人。你虽然被妈妈Kris Jenner彻底除名，但你拥有了<strong>绝对清醒的头脑和无价的精神自由</strong>。\u201D',
-   krisQuote:'\u201C我有……一个生产论文的女儿。我们不提这件事。📚\u201D',
-   manifesto:'当你显化成功：你会发现你根本不需要钱。你写的博士论文《如何用臀部顶起一瓶汽水迷思》在构石发表，被引用了3000次。',
-   persona:'卡家的学术异类，用哲学博士证明了灵魂比翘臀更有价值'},
-
   // ── 成功结局：再见了所有卡戴珊战士 ──────────────────────────
-  // 条件：自我≥300 且 身价≤400 → 极高精神觉醒+放弃物质
+  // 条件：自我≥250 且 身价≤400 → 极高精神觉醒+放弃物质
+  // 排在雅思前面，因为条件更严格（ziwo>=250 vs 180）
   {id:'retire',
-   condition:function(s){return s.ziwo>=300&&s.shenjia<=400;},
+   condition:function(s){return s.ziwo>=250&&s.shenjia<=400;},
    title:'再见了所有卡戴珊战士',subtitle:'平凡觉醒者',color:'#9B59B6',
    headline:'疯了还是醒了？百亿名媛放弃一切消失在人海！',
    story:'\u201C你在名利场的巅峰按下了暂停键。你剪断了所有网线，注销了上亿粉丝的账号，隐居在普罗旺斯的石头小镇。你穿着沾满颜料的围裙在画室里度过余生，房东老太太教你种薰衣草。你是卡戴珊家族百年历史上，<strong>唯一一个拥有完整灵魂的\u2019普通人\u2019</strong>。咖啡馆墙上还挂着你画的第一幅日落。\u201D',
    krisQuote:'\u201C她为了一种我永远无法理解的生活离开了帝国。但她笑起来是真心的…我甚至记不清那种感觉了。🌅\u201D',
    manifesto:'当你显化成功：你会把所有的钱换成了一栋老房子、一个花园，和一辈子画不完的日落。',
    persona:'名利场的叛逆者，选择灵魂自由的普罗旺斯画家'},
+
+  // ── 成功结局：雅思8.5高学历拥有者 ──────────────────────────
+  // 条件：自我≥180 且 流量≤650 且 商业版图≤600 → 拒绝名利走学术路线
+  {id:'scholar',
+   condition:function(s){return s.ziwo>=180&&s.liuliang<=650&&s.shangyebantu<=600;},
+   title:'雅思8.5高学历拥有者',subtitle:'精神自由者',color:'#00897B',
+   headline:'家族之耻？高智商怪咖惨遭卡戴珊除名！',
+   story:'\u201C拒绝整容、拒绝炒作，你甚至去欧洲读了一个哲学博士。你成了家族合照里被裁掉的那个人。你虽然被妈妈Kris Jenner彻底除名，但你拥有了<strong>绝对清醒的头脑和无价的精神自由</strong>。\u201D',
+   krisQuote:'\u201C我有……一个生产论文的女儿。我们不提这件事。📚\u201D',
+   manifesto:'当你显化成功：你会发现你根本不需要钱。你写的博士论文《如何用臀部顶起一瓶汽水迷思》在构石发表，被引用了3000次。',
+   persona:'卡家的学术异类，用哲学博士证明了灵魂比翘臀更有价值'},
 
   // ═══ 第五层：兜底结局 ═══════════════════════════════════════
 
@@ -836,7 +838,7 @@ function renderEnding(e){
 
 function replayGame(){
   GameState.playerName='';
-  GameState.stats={liuliang:80,taihou:80,shenjia:20,ziwo:80,caopan:0,shangyebantu:0};
+  GameState.stats={liuliang:80,taihou:100,shenjia:20,ziwo:100,caopan:0,shangyebantu:0};
   GameState.currentStage=0;
   GameState.choices=[];
   GameState.choiceTypes=[];
