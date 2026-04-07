@@ -293,9 +293,9 @@ var ENDINGS = [
 
   // ═══ 第二层：隐藏结局 ═══════════════════════════════════════
 
-  // ── 隐藏结局：抓马queen（全程选≥4次抓马选项）─────────────────
+  // ── 隐藏结局：抓马queen（全程选≥3次抓马选项）─────────────────
   {id:'chaos',
-   condition:function(s){return (s._allDramaCount||0)>=4;},
+   condition:function(s){return (s._allDramaCount||0)>=3;},
    title:'抓马queen',subtitle:'隐藏结局',color:'#FFD700',
    headline:'谁是妈妈最爱的女儿？',
    story:'\u201C你的选择出乎所有人意料，没有人能预测到你的下一步！但你是一个mother，一个millionaire，也是law student和a billionaire。<strong>你可要记得，你是妈妈最爱的女儿。</strong>\u201D',
