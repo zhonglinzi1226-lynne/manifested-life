@@ -30,7 +30,7 @@ var STAGES = [
 {
   age:'AGE 16', title:'颜值微调',
   scene:'波普风VIP医美诊所，霓虹色调，墙上挂满卡家Before/After对比照',
-  bg:'你16岁了，在这个家族里长大你明白一个真理：<strong>颜值就是印钞机</strong>。大姐金靠翘臀成为全球顶流，小妹凯莉靠丰唇建了十亿美妆帝国，该轮到你了。',
+  bg:'你16岁了，在这个家族里长大你明白一个真理：<strong>颜值就是印钞机</strong>。二姐金靠翘臀成为全球顶流，小妹凯莉靠丰唇建了十亿美妆帝国，该轮到你了。',
   story:'<strong>比弗利山庄顶级医美诊所的VIP室</strong>。墙上挂着卡戴珊全家的前后对比照，桌上放着丝芙兰上亿美妆代言合约。妈妈用指尖敲了敲3D建模图上你的鼻子和臀部：「亲爱的，看看金的屁股、凯莉的嘴唇，这就是我们家的印钞机。你的鼻子不够翘，臀部不够饱满，上镜就是扁平的。<strong>做完它，这份独家代言就是你的。</strong>」',
   choices:[
     {tag:'A',text:'"妈，给我来全套，鼻子、下巴、臀部一步到位"',
@@ -181,7 +181,7 @@ var STAGES = [
   bg:'你已经35岁，太后已经开始「操盘」你的感情了——她在一场海滩私人晚宴上给你安排了一位<strong>体育界名流</strong>。',
   story:'<strong>海滩私人晚宴</strong>，体育名流给你讲奥运会十项全能金牌夺冠故事。远处的太后疯狂比手势：「<strong>宝贝，让他赘给你！</strong>」',
   choices:[
-    {tag:'A',text:'"行，但婚前协议你自己写"',
+    {tag:'A',text:'"行，但婚前协议我自己签"',
      delta:{liuliang:80,taihou:70,ziwo:-50,shenjia:100,caopan:50,shangyebantu:100},type:'名利',
      feedback:'婚后10年，布鲁斯公开跨性别身份，登上《名利场》封面，震惊全球。太后让你立刻切割。你选择站在伴侣身边，发表了一篇感人至深的长文。',extraDelta:{liuliang:100,taihou:-30,ziwo:50}},
     {tag:'B',text:'"我是个坚强的笨女人，不需要联姻"',
@@ -672,9 +672,8 @@ function showEnding(){
   switchScreen('stage-screen','ending-screen',function(){renderEnding(ending);});
 }
 
-// 结局收集定义（所有可解锁结局，共15种）
+// 结局收集定义（15种结局 + NPC兜底，收集墙共16格）
 // avatar 对应 投胎头像素材/ 目录下的文件
-// NPC兜底结局不列入收集墙
 var ENDING_CATALOG = [
   {id:'soul_death', emoji:'💀', name:'精神死亡',    avatar:'5.webp'},
   {id:'broke',      emoji:'💸', name:'严肃破产中',  avatar:'8.webp'},
@@ -691,6 +690,7 @@ var ENDING_CATALOG = [
   {id:'korea',      emoji:'🎤', name:'KPOP五女一',  avatar:'13.webp'},
   {id:'kanye',      emoji:'🎵', name:'侃爷合伙人',  avatar:'14.webp'},
   {id:'onlyfans',   emoji:'💻', name:'OnlyFans主理人', avatar:'16.webp'},
+  {id:'npc',        emoji:'😐', name:'九位数NPC',   avatar:'结尾.webp'},
 ];
 
 // 根据结局 id 获取对应头像路径
