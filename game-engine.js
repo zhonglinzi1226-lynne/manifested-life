@@ -12,10 +12,10 @@ var STAGES = [
   story:'<strong>比弗利山庄卡戴珊豪宅客厅</strong>。粉色羊绒地毯上摆满摄像机，全美200万观众在线蹲守你的周岁生日派对。太后把嘴贴在你耳边说：「听着宝贝，大哭，越委屈越好。<strong>镜头前没有流泪，只有流量！</strong>这是卡戴珊家的第一课。」',
   choices:[
     {tag:'A',text:'嚎啕大哭，一把抢过姐姐的洋娃娃',
-     delta:{liuliang:30,taihou:20,ziwo:-20,shenjia:2},type:'名利',
+     delta:{liuliang:30,taihou:25,ziwo:-20,shenjia:2},type:'名利',
      feedback:'你的哭戏堪比奥斯卡，KTV频道收视率暴涨，太后当场签下了你的第一份婴儿食品代言——代言的是四牛奶粉，后来被曝出有造假，你第一时间站队取消代言。万幸的是成长很健康。'},
     {tag:'B',text:'面无表情地对着镜头疯狂翻白眼',
-     delta:{liuliang:5,taihou:-30,ziwo:30},type:'独立',
+     delta:{liuliang:5,taihou:-25,ziwo:30},type:'独立',
      feedback:'你翻白眼的0.5秒片段被截成GIF席卷TikTok，<strong>#[name]厌世宝宝#</strong> 冲上全美热搜第一，脱口秀女王邀请你上节目，周六夜现场给你做了专属模仿小品。但因为你还不会说话，所有商务邀约都被太后以「保护宝宝童年」推掉了——实际上是因为她还没谈好分成比例。'},
     {tag:'C',text:'爬向最近的摄像机，一口咬住镜头',
      delta:{liuliang:40,taihou:5,ziwo:10,shenjia:1},type:'抓马',
@@ -34,7 +34,7 @@ var STAGES = [
   story:'<strong>比弗利山庄顶级医美诊所的VIP室</strong>。墙上挂着卡戴珊全家的前后对比照，桌上放着丝芙兰上亿美妆代言合约。妈妈用指尖敲了敲3D建模图上你的鼻子和臀部：「亲爱的，看看金的屁股、凯莉的嘴唇，这就是我们家的印钞机。你的鼻子不够翘，臀部不够饱满，上镜就是扁平的。<strong>做完它，这份独家代言就是你的。</strong>」',
   choices:[
     {tag:'A',text:'"妈，给我来全套，鼻子、下巴、臀部一步到位"',
-     delta:{liuliang:50,taihou:30,ziwo:-30,shenjia:10},type:'名利',
+     delta:{liuliang:50,taihou:35,ziwo:-30,shenjia:10},type:'名利',
      triggerSideline:'korea',
      feedback:'手术大获成功！翘臀和精致鼻子直接登上八卦头条。但一周后飞迈阿密参加派对，过机场安检时臀部假体里的微量金属标识触发了探测器，安检员当着全机场的人给你做二次安检，严肃问「身上是不是藏了违禁品」。路人拍下视频发到网上，<strong>#[name]翘臀暗藏玄机#</strong> 笑上热搜。',extraDelta:{liuliang:10}},
     {tag:'B',text:'"只做嘴唇，别的我自己说了算"',
@@ -42,7 +42,7 @@ var STAGES = [
      feedback:'只做了唇部微调，效果自然到网友争论了三个月「到底动没动」。TikTok上掀起了<strong>#[name]香肠嘴#</strong> 挑战赛，间接帮丝芙兰代言多卖了200%。太后虽然嫌你「不够彻底」，但看到销量数据后勉强满意。'},
     {tag:'C',text:'"不了，我这张脸就是最好的出厂设置"',
      delta:{liuliang:-25,taihou:-30,ziwo:40,shenjia:-3},type:'独立',
-     feedback:'前姐夫侃爷凌晨3点连发17条推特，置顶一条：「<strong>卡家军里唯一清醒的女士！</strong>」你的Ins一夜涨粉120万，流量直接飙升，但太后看到后当场气炸，冻结了你名下所有黑卡、信用卡，还把你从真人秀主镜头里剪掉了3集。',extraDelta:{liuliang:50,taihou:-20}},
+     feedback:'前姐夫侃爷凌晨3点连发17条推特，置顶一条：「<strong>卡家军里唯一清醒的女士！</strong>」你的Ins一夜涨粉120万，流量直接飙升，但太后看到后当场气炸，冻结了你名下所有黑卡、信用卡，还把你从真人秀主镜头里剪掉了3集。',extraDelta:{liuliang:50}},
     {tag:'D',text:'"我不做，但我可以代言医美品牌再暗中劝退别人整容"',
      delta:{liuliang:30,taihou:-20,ziwo:20,shangyebantu:15},type:'商业',
      feedback:'你签下了医美品牌代言，拍了一组「自然美」大片，暗中在Ins story里发「爱自己本来的样子」。两边通吃的操作被网友称为「<strong>薛定谔的整容</strong>」——你既是医美代言人，又是自然美倡导者。商业天才还是两面派？网友吵翻了，但不管站哪边都在给我贡献流量。'}
@@ -66,7 +66,7 @@ var STAGES = [
      delta:{liuliang:80,taihou:-10,ziwo:20,shenjia:30},type:'商业',
      feedback:'你抢在媒体前面发了一份措辞严厉的律师函，声称视频是AI deepfake。虽然大家心知肚明，但这招居然有效——视频变成了「<strong>薛定谔的录像带</strong>」，没人能确认真假。你趁机接下了一个AI安全公司的代言，并在发布会上与硅谷钢铁侠马斯克短暂邂逅。'},
     {tag:'D',text:'"给前男友打电话：咱俩一起开个OnlyFans吧"',
-     delta:{liuliang:200,taihou:50,ziwo:-55,shenjia:150},type:'抓马',
+     delta:{liuliang:200,taihou:55,ziwo:-55,shenjia:150},type:'抓马',
      triggerSideline:'onlyfans_seed',
      feedback:'你和前男友联合开设了OnlyFans账号，首月订阅突破百万。太后惊喜地发现这比卖给成人网站赚多了10倍：「<strong>为什么要让平台抽成？我们自己就是平台！</strong>」你成了社交媒体创业的先驱，但代价是——感恩节全家聚餐时没人敢和你对视。'}
   ]
@@ -84,7 +84,7 @@ var STAGES = [
      stage4Branch:'drama',
      feedback:'你的「坚强大女主」发布会爆了，<strong>#[name]要坚强#</strong> 霸榜热搜3天，「不完美日记」坚强系列上线10分钟售罄，品牌估值直接翻3倍。但前男友接受采访说你「把感情当成了流量工具」，你回应：「这次我一定要变现！」'},
     {tag:'B',text:'"这是私事，低调处理就行。"',
-     delta:{liuliang:-20,taihou:-50,ziwo:40,shangyebantu:-30},type:'独立',
+     delta:{liuliang:-20,taihou:-35,ziwo:40,shangyebantu:-30},type:'独立',
      stage4Branch:'grace',
      feedback:'你发了一条简短声明「私人感情问题私下处理」，取消发布会所有煽情环节。销量只卖了预期30%，太后气得一周没和你说话，说你「浪费了天赐的流量机会」。但你和男友和平分手，<strong>保留了最后的体面</strong>。'},
     {tag:'C',text:'"如果出轨对象愿意配合，搞三方联名"',
@@ -102,16 +102,16 @@ var STAGES = [
   story:'<strong>卡戴珊家族总部董事会会议室</strong>。长条桌前坐满了律师和财务总监，墙上屏幕显示你过去5年的收入流水，太后拿着两份文件：续约合同 vs 解约合同。「<strong>选吧：继续让妈妈操盘，一起赚更多的钱；或者解雇妈妈，脱离家族，自己掌管一切——但卡戴珊的资源，你再也用不了了。</strong>」',
   choices:[
     {tag:'A',text:'"妈，续约，给你涨到30%"',
-     delta:{liuliang:50,taihou:100,ziwo:-35,shenjia:50,caopan:-100},type:'名利',
+     delta:{liuliang:50,taihou:130,ziwo:-35,shenjia:50,caopan:-100},type:'名利',
      feedback:'太后感动得差点掉了假睫毛（注意是「差点」，卡家的假睫毛$500一对）。你成了太后最宠爱的女儿，所有最好的资源优先给你。代价是——<strong>你签字时手在抖</strong>，因为你清楚这意味着什么。'},
     {tag:'B',text:'"解雇她！自己单干！"',
-     delta:{liuliang:-15,taihou:-150,ziwo:120,shenjia:10,caopan:100},type:'独立',
+     delta:{liuliang:-15,taihou:-80,ziwo:120,shenjia:10,caopan:100},type:'独立',
      feedback:'你离开家族后，太后在真人秀里哭诉「我失去了一个女儿」（收视率暴涨），同时<strong>暗中指示律师冻结了你名下的三处房产和两个品牌的商标</strong>。你才意识到——卡家的资源不是说断就能断的。'},
     {tag:'C',text:'"续约可以，但重谈条件——5%，不能更多"',
      delta:{liuliang:0,taihou:20,ziwo:30,shenjia:100,caopan:20},type:'商业',
      feedback:'经过<strong>48小时不眠不休的谈判</strong>（太后中途两次假装心脏病发作），最终敲定7.5%。双方都不完全满意，但这恰恰说明这是一个好的交易。'},
     {tag:'D',text:'"妈，让我来当整个家族的经纪人，你退休吧"',
-     delta:{liuliang:30,taihou:-80,ziwo:80,caopan:150},type:'抓马',
+     delta:{liuliang:30,taihou:-50,ziwo:80,caopan:150},type:'抓马',
      feedback:'太后沉默了整整30秒（这是她人生中最长的一次沉默）。然后她笑了：「<strong>我等这一天等了25年。</strong>」她没有生气——她在你身上看到了年轻时的自己。当然，她还是偷偷保留了一票否决权。'}
   ]
 },
@@ -127,8 +127,8 @@ var STAGES = [
      delta:{liuliang:-20,taihou:20,ziwo:60,shenjia:10,caopan:20},type:'独立',
      feedback:'你发了一份优雅的分手声明，网友评价「<strong>离婚都这么体面，不愧是顶流</strong>」。你和前夫保持了共同抚养孩子的体面关系。'},
     {tag:'B',text:'"放出他所有黑料，热搜给我霸满一周。"',
-     delta:{liuliang:120,taihou:50,ziwo:-40,shenjia:50,caopan:50},type:'名利',
-     feedback:'你在真人秀里曝光前夫出轨、转移资产的实锤，前夫恼羞成怒争夺抚养权。太后亲自下场，带全家拍了【<strong>全家代言手撕鸡</strong>】特辑，收视破纪录。流量暴涨但路人口碑暴跌。',extraDelta:{liuliang:80,ziwo:-20}},
+     delta:{liuliang:120,taihou:60,ziwo:-40,shenjia:50,caopan:50},type:'名利',
+     feedback:'你在真人秀里曝光前夫出轨、转移资产的实锤，前夫恼羞成怒争夺抚养权。太后亲自下场，带全家拍了【<strong>全家代言手撕鸡</strong>】特辑，收视破纪录。流量暴涨但路人口碑暴跌。',extraDelta:{liuliang:80}},
     {tag:'C',text:'"告诉前夫：要么净身出户，要么太后来处理"',
      delta:{liuliang:0,taihou:30,ziwo:10,shenjia:80,caopan:30},type:'商业',
      feedback:'前夫接到太后的电话后15分钟就签了和解协议。没人知道太后说了什么，但你前夫从此对「<strong>卡戴珊</strong>」这个姓氏产生了PTSD。后来有记者问他离婚感想，他只说了一句：「我建议所有男人远离比弗利山庄。」'}
@@ -143,11 +143,11 @@ var STAGES = [
   story:'<strong>你的个人经纪公司开业</strong>，太后把全家姐妹的独家经纪权递给你：「今天，我正式把卡戴珊家族所有姐妹的经纪权交给你。你可以效仿我，<strong>把生活卖成流量，统治好莱坞。</strong>」',
   choices:[
     {tag:'A',text:'"接手全部经纪权，我要做这个家族的新太后"',
-     delta:{liuliang:100,taihou:80,ziwo:-35,shenjia:150,caopan:150,shangyebantu:100},type:'名利',
+     delta:{liuliang:100,taihou:100,ziwo:-35,shenjia:150,caopan:150,shangyebantu:100},type:'名利',
      triggerSideline:'kanye_possible',
      feedback:'侃爷团队递上<strong>20亿全球独家经纪合约</strong>。太后强烈反对，并且扬言要让他代言咖啡豆，侃爷只好ye憾退场。'},
     {tag:'B',text:'"姐姐们的事，我不掺和"',
-     delta:{liuliang:-10,taihou:-60,ziwo:80,shenjia:30,caopan:-50,shangyebantu:30},type:'独立',
+     delta:{liuliang:-10,taihou:-50,ziwo:80,shenjia:30,caopan:-50,shangyebantu:30},type:'独立',
      feedback:'你选择轻装上阵，不卷家族事务。太后失望但尊重你的决定，把经纪权转给了妹妹。<strong>不知道你要干嘛。</strong>'},
     {tag:'C',text:'"我要改革，把家族升级成MCN"',
      delta:{liuliang:50,taihou:30,ziwo:20,caopan:80,shangyebantu:200},type:'商业',
@@ -163,10 +163,10 @@ var STAGES = [
   story:'CEO说：「我们要拍你的一切——撕逼、婚姻、生孩子、离婚，<strong>全部！</strong>」',
   choices:[
     {tag:'A',text:'"拍！全拍！我连上厕所都可以直播！"',
-     delta:{liuliang:300,taihou:100,ziwo:-40,shenjia:300,caopan:100,shangyebantu:200},type:'名利',
+     delta:{liuliang:300,taihou:110,ziwo:-60,shenjia:300,caopan:100,shangyebantu:200},type:'名利',
      feedback:'首播收视破历史纪录，连续20季经久不衰，<strong>8次艾美奖提名</strong>。你成了好莱坞最有权势的女制作人。',extraDelta:{liuliang:200,shangyebantu:500},extraMultiply:{shenjia:2}},
     {tag:'B',text:'"低俗真人秀免了，我要做高端访谈节目"',
-     delta:{liuliang:-20,taihou:-50,ziwo:100,shenjia:-80,caopan:-20,shangyebantu:20},type:'独立',
+     delta:{liuliang:-20,taihou:-50,ziwo:100,shenjia:-120,caopan:-20,shangyebantu:20},type:'独立',
      feedback:'你拒绝了抓马真人秀，转而做了一档深度访谈节目。虽然收视率远不如卡家真人秀，但你采访了奥巴马夫人、比尔·盖茨、霉霉，节目<strong>拿了两个艾美奖</strong>。太后酸溜溜地说：「两个艾美奖还抵不上我一集的广告费。」'},
     {tag:'C',text:'"拍真人秀可以，但最终剪辑权必须在我手里"',
      delta:{liuliang:150,taihou:30,ziwo:10,shenjia:200,caopan:80,shangyebantu:150},type:'商业',
@@ -182,10 +182,10 @@ var STAGES = [
   story:'<strong>海滩私人晚宴</strong>，体育名流给你讲奥运会十项全能金牌夺冠故事。远处的太后疯狂比手势：「<strong>宝贝，让他赘给你！</strong>」',
   choices:[
     {tag:'A',text:'"行，但婚前协议你自己写"',
-     delta:{liuliang:80,taihou:70,ziwo:-30,shenjia:100,caopan:50,shangyebantu:100},type:'名利',
-     feedback:'婚后10年，布鲁斯公开跨性别身份，登上《名利场》封面，震惊全球。太后让你立刻切割。你选择站在伴侣身边，发表了一篇感人至深的长文。',extraDelta:{liuliang:100,taihou:-50,ziwo:50}},
+     delta:{liuliang:80,taihou:70,ziwo:-50,shenjia:100,caopan:50,shangyebantu:100},type:'名利',
+     feedback:'婚后10年，布鲁斯公开跨性别身份，登上《名利场》封面，震惊全球。太后让你立刻切割。你选择站在伴侣身边，发表了一篇感人至深的长文。',extraDelta:{liuliang:100,taihou:-30,ziwo:50}},
     {tag:'B',text:'"我是个坚强的笨女人，不需要联姻"',
-     delta:{liuliang:0,taihou:-40,ziwo:90,shenjia:-10,caopan:20},type:'独立',
+     delta:{liuliang:0,taihou:-30,ziwo:90,shenjia:-10,caopan:20},type:'独立',
      feedback:'你拒绝了联姻，在Ins上发了一段独白：「<strong>我是个坚强的笨女人，爱情不是交易。</strong>」视频播放量破亿，成了独立女性的宣言。太后虽然不满，但偷偷把这段视频收藏了。'},
     {tag:'C',text:'"不嫁他，但我可以当他的经纪人"',
      delta:{liuliang:30,taihou:10,ziwo:30,shenjia:50,caopan:30,shangyebantu:80},type:'商业',
@@ -201,10 +201,10 @@ var STAGES = [
   story:'<strong>卡戴珊商业集团总部顶层</strong>，整面墙都是旗下品牌。太后把控制权钥匙递给你，问你想做什么。',
   choices:[
     {tag:'A',text:'"把我的脸印在所有能卖钱的东西上！"',
-     delta:{liuliang:150,taihou:100,ziwo:-60,shenjia:500,caopan:100,shangyebantu:800},type:'名利',
-     feedback:'全面扩张商业版图。<strong>美国国税局IRS上门调查税务漏洞</strong>，太后让你顶包。你拿出证据让全家按股份比例共同承担，Kris当场翻脸。',extraDelta:{taihou:-180,ziwo:100,caopan:100}},
+     delta:{liuliang:150,taihou:100,ziwo:-80,shenjia:500,caopan:100,shangyebantu:800},type:'名利',
+     feedback:'全面扩张商业版图。<strong>美国国税局IRS上门调查税务漏洞</strong>，太后让你顶包。你拿出证据让全家按股份比例共同承担，Kris当场翻脸。',extraDelta:{taihou:-110,ziwo:100,caopan:100}},
     {tag:'B',text:'"高端化。做卡戴珊的爱马仕，不做沃尔玛"',
-     delta:{liuliang:-120,taihou:-40,ziwo:70,shenjia:-30,caopan:30,shangyebantu:200},type:'独立',
+     delta:{liuliang:-180,taihou:-40,ziwo:70,shenjia:-30,caopan:30,shangyebantu:200},type:'独立',
      feedback:'你砍掉所有低俗流量变现线，只保留高端线。三年后品牌登上巴黎时装周，Vogue女魔头亲自写了推荐语。太后虽然嫌你「赚得少」，但看到<strong>爱马仕总裁主动约你午餐</strong>后闭嘴了。'},
     {tag:'C',text:'"两条腿走路——高端线用主品牌，平价线用子品牌"',
      delta:{liuliang:80,taihou:40,ziwo:10,shenjia:300,caopan:50,shangyebantu:500},type:'商业',
@@ -220,10 +220,10 @@ var STAGES = [
   story:'<strong>卡戴珊家族年度圣诞晚宴</strong>。垂垂老矣的太后拿着家族信托站在台上：「今天，我正式宣布卡戴珊家族<strong>太后易主</strong>！这是你人生的最后一道选择题。」',
   choices:[
     {tag:'A',text:'"给我家族信托。显化成功！"',
-     delta:{liuliang:500,taihou:200,ziwo:-70,shenjia:1000,caopan:200,shangyebantu:1000},type:'名利',
+     delta:{liuliang:500,taihou:200,ziwo:-100,shenjia:1000,caopan:200,shangyebantu:1000},type:'名利',
      feedback:'你接过权杖的那一刻，全场起立鼓掌。你成了好莱坞新一代女族长，卡戴珊帝国在你手上将迎来更加疯狂的时代。'},
     {tag:'B',text:'"我要自由。再见妈妈。"',
-     delta:{liuliang:-250,taihou:-100,ziwo:200,shenjia:-100,caopan:-200,shangyebantu:0},type:'独立',
+     delta:{liuliang:-350,taihou:-80,ziwo:200,shenjia:-150,caopan:-200,shangyebantu:0},type:'独立',
      feedback:'你摘下钻石耳环，放下爱马仕包，走出了那扇金色大门。你开车去了洛杉矶国际机场，买了一张单程票飞往巴黎。在飞机上注销了Ins、TikTok、Twitter全部社交账号——<strong>1.2亿粉丝，在按下确认键的那一刻，全部归零</strong>。空姐认出了你，问要不要升舱，你说：「不用了，经济舱就挺好。」这是你35年来第一次坐经济舱。'},
     {tag:'C',text:'"不接，但我提议——家族去kris化"',
      delta:{liuliang:50,taihou:-50,ziwo:80,caopan:100,shangyebantu:200},type:'商业',
@@ -238,12 +238,14 @@ var STAGES = [
 
 
 // ============================================================
-// 结局数据（按优先级排序）— 2026-04-06 数值优化版 v2
-// 设计原则：即死维度对应的失败结局最优先，然后隐藏→成功→其余失败→兜底
+// 结局数据（按优先级排序）— 2026-04-07 数值平衡版 v13
+// 设计原则：即死维度失败最优先，然后隐藏→傀儡→成功→兜底
+// 全部15个结局均可达（12主线+3支线），模拟路径覆盖率100%
+// 即死阈值统一为≤0，通过调整选项delta让数值更均衡
 // ============================================================
 var ENDINGS = [
 
-  // ═══ 第一层：即死失败结局（哪个维度爆了就进哪个）═══════════════
+  // ═══ 第一层：即死失败结局（选择后维度爆掉 → 即死）═══════════════
 
   // ── 失败结局：精神死亡（自我≤0 即死触发）─────────────────────
   {id:'soul_death',
@@ -278,7 +280,7 @@ var ENDINGS = [
    persona:'互联网遗忘者，一个被时代抛下的旧版本',
    isFail:true},
 
-  // ── 失败结局：逐出卡门（太后好感≤0 即死触发）──────────────────
+  // ── 失败结局：逐出卡门（太后好感≤0 即死触发）──────────────
   {id:'exile',
    condition:function(s){return s.taihou<=0;},
    title:'逐出「卡」门',subtitle:'家族除名 · 失败结局',color:'#37474F',
@@ -291,9 +293,9 @@ var ENDINGS = [
 
   // ═══ 第二层：隐藏结局 ═══════════════════════════════════════
 
-  // ── 隐藏结局：抓马queen ──────────────────────────────────────
+  // ── 隐藏结局：抓马queen（全程选≥4次抓马选项）─────────────────
   {id:'chaos',
-   condition:function(s){return (s._allDramaCount||0)>=5;},
+   condition:function(s){return (s._allDramaCount||0)>=4;},
    title:'抓马queen',subtitle:'隐藏结局',color:'#FFD700',
    headline:'谁是妈妈最爱的女儿？',
    story:'\u201C你的选择出乎所有人意料，没有人能预测到你的下一步！但你是一个mother，一个millionaire，也是law student和a billionaire。<strong>你可要记得，你是妈妈最爱的女儿。</strong>\u201D',
@@ -314,11 +316,12 @@ var ENDINGS = [
    persona:'卡家最华丽的摆设，一个没有灵魂的金色傀儡',
    isFail:true},
 
-  // ═══ 第四层：成功结局 ═══════════════════════════════════════
+  // ═══ 第四层：成功结局（按限制性从强到弱排列）══════════════════
 
   // ── 成功结局：Queen never cry ──────────────────────────────
+  // 条件：操盘权≥300 且 太后好感≥250 → 权力继承者路线
   {id:'taihou2',
-   condition:function(s){return s.caopan>=200&&s.taihou>=150;},
+   condition:function(s){return s.caopan>=300&&s.taihou>=250;},
    title:'Queen never cry',subtitle:'好莱坞女族长',color:'#E5173F',
    headline:'权力交接！她把整个好莱坞踩在了定制高跟鞋下！',
    story:'\u201C恭喜你，屠龙者终成恶龙。有天，你测自己的MBTI发现是——KRIS，富态者。你坐在比弗利山庄的王座上，冷眼看着妹妹们为了一个热搜大打出手，就像当年太后看着你一样。\u201D',
@@ -327,9 +330,9 @@ var ENDINGS = [
    persona:'新一代名利场女王，用铁腕统治娱乐帝国的女族长'},
 
   // ── 成功结局：疯狂星期四的M女王 ──────────────────────────────
-  // 商业版图高 + 自我偏低 + 太后关系还行
+  // 条件：商业版图≥1200 且 自我≤200 → 商业做大但自我缺失
   {id:'fastfood',
-   condition:function(s){return s.shangyebantu>=800&&s.ziwo<250&&s.taihou>0;},
+   condition:function(s){return s.shangyebantu>=1200&&s.ziwo<=200;},
    title:'疯狂星期四的M女王',subtitle:'快消帝国女皇',color:'#E67E22',
    headline:'吃鸡暴富！每一口炸鸡都是她的ATM！',
    story:'\u201C你没有选择做高冷的奢侈品，而是把自己的波普头像印在了全球几万家连锁快餐的炸鸡盒和咖啡杯上。只要有人摄入垃圾食品，就在为你交版税。<strong>你是资本主义最精致的产品——一个活着的品牌logo。</strong>\u201D',
@@ -338,9 +341,9 @@ var ENDINGS = [
    persona:'快消品帝国的女皇，把自己活成了全球最赚钱的logo'},
 
   // ── 成功结局：老娘独享经济 ──────────────────────────────────
-  // 商业版图高 + 独立路线（到终局太后好感可能很低但>0因为<0即死）
+  // 条件：商业版图≥800 且 太后好感≤50 → 脱离家族靠自己的独立商业路线
   {id:'wallstreet',
-   condition:function(s){return s.shangyebantu>=800;},
+   condition:function(s){return s.shangyebantu>=800&&s.taihou<=50;},
    title:'老娘独享经济',subtitle:'独立商业女王',color:'#2ECC71',
    headline:'决裂与重生！她证明了不靠家族也能赚到十亿美金！',
    story:'\u201C你亲手撕碎了家族的真人秀剧本，从太后的事业里叛逃出来，白手起家建立了自己的商业王国。没有抓马，没有艳舞，只有你一个人对着全世界证明——<strong>离开了\u2019卡戴珊\u2019这个姓氏，你依然能站在财富的顶端。</strong>\u201D',
@@ -349,8 +352,9 @@ var ENDINGS = [
    persona:'华尔街的卡戴珊异类，用商业头脑碾压名利场的独立女王'},
 
   // ── 成功结局：没有不上热搜的义务 ──────────────────────────
+  // 条件：流量≥800 且 身价≥500 → 流量至上的人生
   {id:'topchart',
-   condition:function(s){return s.liuliang>=700&&s.shenjia>=500;},
+   condition:function(s){return s.liuliang>=800&&s.shenjia>=500;},
    title:'没有不上热搜的义务',subtitle:'真人秀传奇',color:'#1E90FF',
    headline:'流量至死！她用整个人生上演了一场楚门的世界！',
    story:'\u201C你是互联网时代的热搜制造者。你把自己的婚姻、生育、背叛全部明码标价，包装成20季经久不衰的下饭电子榨菜。你养活了半个娱乐圈的狗仔，但<strong>当深夜摄像机关机时，你甚至想不起来自己真实的性格是什么。</strong>\u201D',
@@ -359,9 +363,9 @@ var ENDINGS = [
    persona:'互联网时代的真人秀之神，把人生活成了最赚钱的连续剧'},
 
   // ── 成功结局：雅思8.5高学历拥有者 ──────────────────────────
-  // 高自我 + 低流量（独立学术路线）— 排在 retire 前面
+  // 条件：自我≥180 且 流量≤550 且 商业版图≤600 → 拒绝名利走学术路线
   {id:'scholar',
-   condition:function(s){return s.ziwo>=250&&s.liuliang<300;},
+   condition:function(s){return s.ziwo>=180&&s.liuliang<=550&&s.shangyebantu<=600;},
    title:'雅思8.5高学历拥有者',subtitle:'精神自由者',color:'#00897B',
    headline:'家族之耻？高智商怪咖惨遭卡戴珊除名！',
    story:'\u201C拒绝整容、拒绝炒作，你甚至去欧洲读了一个哲学博士。你成了家族合照里被裁掉的那个人。你虽然被妈妈Kris Jenner彻底除名，但你拥有了<strong>绝对清醒的头脑和无价的精神自由</strong>。\u201D',
@@ -370,8 +374,9 @@ var ENDINGS = [
    persona:'卡家的学术异类，用哲学博士证明了灵魂比翘臀更有价值'},
 
   // ── 成功结局：再见了所有卡戴珊战士 ──────────────────────────
+  // 条件：自我≥300 且 身价≤400 → 极高精神觉醒+放弃物质
   {id:'retire',
-   condition:function(s){return s.ziwo>=300;},
+   condition:function(s){return s.ziwo>=300&&s.shenjia<=400;},
    title:'再见了所有卡戴珊战士',subtitle:'平凡觉醒者',color:'#9B59B6',
    headline:'疯了还是醒了？百亿名媛放弃一切消失在人海！',
    story:'\u201C你在名利场的巅峰按下了暂停键。你剪断了所有网线，注销了上亿粉丝的账号，隐居在普罗旺斯的石头小镇。你穿着沾满颜料的围裙在画室里度过余生，房东老太太教你种薰衣草。你是卡戴珊家族百年历史上，<strong>唯一一个拥有完整灵魂的\u2019普通人\u2019</strong>。咖啡馆墙上还挂着你画的第一幅日落。\u201D',
@@ -443,7 +448,7 @@ function updateStatsUI(){
     var val=document.getElementById('val-'+k);
     if(!bar||!val)return;
     var v=s[k]||0;
-    var pct=clamp(k==='taihou'?(v+200)/(MAX[k]+200)*100:v/MAX[k]*100);
+    var pct=clamp(v/MAX[k]*100);
     bar.style.width=pct+'%';
     val.textContent=(k==='shenjia'||k==='shangyebantu')?'$'+v+'M':v;
   });
@@ -664,8 +669,9 @@ function showEnding(){
   switchScreen('stage-screen','ending-screen',function(){renderEnding(ending);});
 }
 
-// 结局收集定义（所有可解锁结局，共16种）
+// 结局收集定义（所有可解锁结局，共15种）
 // avatar 对应 投胎头像素材/ 目录下的文件
+// NPC兜底结局不列入收集墙
 var ENDING_CATALOG = [
   {id:'soul_death', emoji:'💀', name:'精神死亡',    avatar:'5.webp'},
   {id:'broke',      emoji:'💸', name:'严肃破产中',  avatar:'8.webp'},
@@ -679,7 +685,6 @@ var ENDING_CATALOG = [
   {id:'retire',     emoji:'🎨', name:'再见卡戴珊战士', avatar:'9.webp'},
   {id:'fastfood',   emoji:'🍗', name:'M女王',       avatar:'6.webp'},
   {id:'scholar',    emoji:'📚', name:'雅思8.5',     avatar:'10.webp'},
-  {id:'npc',        emoji:'💤', name:'九位数NPC',   avatar:'11.webp'},
   {id:'korea',      emoji:'🎤', name:'KPOP五女一',  avatar:'13.webp'},
   {id:'kanye',      emoji:'🎵', name:'侃爷合伙人',  avatar:'14.webp'},
   {id:'onlyfans',   emoji:'💻', name:'OnlyFans主理人', avatar:'16.webp'},
@@ -890,19 +895,19 @@ function renderSecondEvent(mainStageIdx){
   if(isDrama){
     choices2=[
       {tag:'A',text:'发Ins隐晦吐槽，把内战变成全网吃瓜大戏',
-       delta:{liuliang:80,taihou:30,caopan:-20,ziwo:-20},
+       delta:{liuliang:80,taihou:30,caopan:-20,ziwo:-20},type:'抓马',
        feedback:'瞬间引爆全网，<strong>#[name]姐妹撕逼#</strong> 直接冲上世趋第一，真人秀预告剪了吵架片段，收视预约破纪录。但你和妹妹彻底反目，三年没在同一个饭局出现过。'},
       {tag:'B',text:'微笑说「封面而已」，转头签下Vogue母集团全年合作',
        delta:{shangyebantu:50,taihou:10,ziwo:30,caopan:30},
        feedback:'你当着全家面笑着说「妹妹更适合这个封面」，转头和康泰纳仕签了全球独家合作，拿下全年12刊封面资源。太后都惊了：「<strong>比我还会玩商业。</strong>」'},
       {tag:'C',text:'当场掀桌：「这顿饭谁做的？跟这封面一样——没品！」',
-       delta:{liuliang:50,taihou:-20,ziwo:10,caopan:10},
+       delta:{liuliang:50,taihou:-20,ziwo:10,caopan:10},type:'抓马',
        feedback:'掀桌片段被家里的摄像机拍下（太后在每个房间都装了），「<strong>卡家掀桌名场面</strong>」成为本季收视最高片段。太后当晚给导播打电话：「这段一定要放头条。」'}
     ];
   } else {
     choices2=[
       {tag:'A',text:'正面硬刚，曝光妹妹暗箱操作',
-       delta:{liuliang:100,taihou:-60,ziwo:50,caopan:10},
+       delta:{liuliang:100,taihou:-50,ziwo:50,caopan:10},
        feedback:'你直接把品牌方和妹妹的聊天记录发了出来，全网站你。品牌方公开道歉，还额外给了你一个全球代言。但太后说你「毁了家族团结」，把你踢出了家族董事会。'},
       {tag:'B',text:'体面退让，私下签更高规格合作',
        delta:{shangyebantu:50,taihou:10,ziwo:30,caopan:30},
@@ -923,6 +928,9 @@ function renderSecondEvent(mainStageIdx){
         cl2.querySelectorAll('.choice-btn').forEach(function(b){b.classList.add('disabled');});
         btn.classList.add('selected');
         applyDelta(c.delta);
+        if(c.type==='抓马')GameState.stats._allDramaCount=(GameState.stats._allDramaCount||0)+1;
+        // 记录二次事件回看
+        if(typeof recordChoice==='function') recordChoice(mainStageIdx, c);
         updateStatsUI();
         var NAMES={liuliang:'流量',taihou:'太后好感',ziwo:'自我',caopan:'操盘权',shenjia:'身价',shangyebantu:'商业版图'};
         var dHtml='<div class="stat-deltas">';
