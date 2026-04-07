@@ -166,7 +166,7 @@ var STAGES = [
      delta:{liuliang:300,taihou:110,ziwo:-60,shenjia:300,caopan:100,shangyebantu:200},type:'名利',
      feedback:'首播收视破历史纪录，连续20季经久不衰，<strong>8次艾美奖提名</strong>。你成了好莱坞最有权势的女制作人。',extraDelta:{liuliang:200,shangyebantu:500},extraMultiply:{shenjia:2}},
     {tag:'B',text:'"低俗真人秀免了，我要做高端访谈节目"',
-     delta:{liuliang:-20,taihou:-50,ziwo:100,shenjia:-120,caopan:-20,shangyebantu:20},type:'独立',
+     delta:{liuliang:-20,taihou:-50,ziwo:100,shenjia:-50,caopan:-20,shangyebantu:20},type:'独立',
      feedback:'你拒绝了抓马真人秀，转而做了一档深度访谈节目。虽然收视率远不如卡家真人秀，但你采访了奥巴马夫人、比尔·盖茨、霉霉，节目<strong>拿了两个艾美奖</strong>。太后酸溜溜地说：「两个艾美奖还抵不上我一集的广告费。」'},
     {tag:'C',text:'"拍真人秀可以，但最终剪辑权必须在我手里"',
      delta:{liuliang:150,taihou:30,ziwo:10,shenjia:200,caopan:80,shangyebantu:150},type:'商业',
